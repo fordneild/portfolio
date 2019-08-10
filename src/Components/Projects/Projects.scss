@@ -1,0 +1,20 @@
+@import '../../variables';
+.projects--container{
+    width: 100%;
+    height: 1440px;
+    background-color: $primary-light;
+    h1{
+        font-family: $header-font;
+        color: $primary-dark;
+        margin: 0;
+        margin: 100px auto;
+        width: fit-content;
+        font-size: 44px;
+    }
+    .projects{
+        width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

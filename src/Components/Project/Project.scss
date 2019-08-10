@@ -1,0 +1,21 @@
+@import '../../variables';
+
+.project{
+    width: 270px;
+    height: 270px;
+    margin: 15px;
+    //background-color: $primary-light;
+    background-image: none;
+    border: 1px solid $accent;
+    box-sizing: border-box;
+    cursor:pointer;
+    transition: all 200ms ease-in-out;
+    h4{
+        font-family: $body-font;
+        //color: $primary-dark;
+    }
+    &:hover{
+        //background-color: $primary;
+        //background-image: unset;
+    }
+}
