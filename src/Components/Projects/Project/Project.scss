@@ -1,4 +1,4 @@
-@import '../../variables';
+@import '../../../variables';
 
 .project{
     width: 270px;
@@ -11,11 +11,16 @@
     cursor:pointer;
     transition: all 200ms ease-in-out;
     h4{
-        font-family: $body-font;
+        font-family: $header-font;
         //color: $primary-dark;
     }
-    &:hover{
-        //background-color: $primary;
-        //background-image: unset;
+
+    h5{
+        font-family: $header-font;
+    }
+    &.active{
+        .rising{
+
+        }
     }
 }

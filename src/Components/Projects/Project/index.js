@@ -32,7 +32,11 @@ class Project extends React.Component {
                 onMouseLeave={this.handleMouseLeave}
                 style={active ? styles : null} 
                 className={`project ${active ? "active" : ""}`}>
+                <h5>{props.company}</h5>
                 <h4>{props.title}</h4>
+                <div className="rising">
+
+                </div>
             </div>
         )
     }
