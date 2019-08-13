@@ -2,7 +2,7 @@ import React from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 
 import './Landing.scss'
-import LandingImage from './landingImage.png'
+import LandingImage from './landingImage2.png'
 
 class Landing extends React.Component {
     constructor(props){
@@ -61,10 +61,11 @@ class Landing extends React.Component {
 
     
     render(){
+       console.log("in render",this.state.isVisible)
         return(
             <VisibilitySensor partialVisibility={true} onChange={this.onChange}>
                 <section className="landing">
-                <img src={LandingImage} />
+                <img src={LandingImage}/>
                     <div className="landing__intro">
                         <div className="text">
                             <h4>Meet Me</h4>
