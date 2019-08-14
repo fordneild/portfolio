@@ -2,20 +2,20 @@
 .landing {
     position: relative;
     font-family: 'Julius Sans One', sans-serif;
+    color: white;
+
     display: flex;
     justify-content: center;
-    // align-items: flex-start;
     background-color: $primary;
     height: 100vh;
-    z-index: -2;
+    z-index: -1;
     >img{
         height: 100%;
-        top: 0;
-        position: fixed;
-        z-index: -1;
     }
-    
-  } 
+  }
+  .fixed{
+    position: fixed;
+  }
   .landing__intro {
     position: absolute;
     top: 32vh;
@@ -25,9 +25,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
-
-    color: white;
     cursor: default;
     h1{
         font-size: 7.5vh;
@@ -48,8 +45,11 @@
     .text-relflection {
         position: relative;
         opacity: 0.3;
-        transform: rotate(180deg) scale(-1,1.5);
-        
+        //idk if we should slow it at all
+        //transition: transform 10ms linear;
+    }
+    &.gone{
+      display: none;
     }
   }
 
