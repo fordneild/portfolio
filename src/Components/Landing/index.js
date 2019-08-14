@@ -34,6 +34,9 @@ class Landing extends React.Component {
         const deltaReflectionY = window.pageYOffset;
         const blur = this.INITIAL_BLUR+(deltaReflectionY/this.BLUR_CONSTANT)
         let translateY = `${deltaReflectionY*this.REFLECTION_CONSTANT}`
+        if(translateY < 0){
+            translateY = 0;
+        }
         const reflectionStyles = {
             filter: `blur(${blur}px)`,
             transform: `rotate(180deg) scale(-1,1.5) translateY(${-1*translateY}px)`
