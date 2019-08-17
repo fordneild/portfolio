@@ -34,6 +34,8 @@ class Landing extends React.Component {
         const deltaReflectionY = window.pageYOffset;
         const blur = this.INITIAL_BLUR+(deltaReflectionY/this.BLUR_CONSTANT)
         let translateY = `${deltaReflectionY*this.REFLECTION_CONSTANT}`
+        //annoying mobile thing that lets u scroll higher than the page is the reason for this
+        
         if(translateY < 0){
             translateY = 0;
         }

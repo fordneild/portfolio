@@ -1,27 +1,59 @@
 @import '../../variables';
 .projects--container{
+    background-image: url('./bg-pattern.png');
+    background-repeat: repeat;
+    background-size: 18%;
     width: 100%;
     height: auto;
     background-color: $primary-light;
     // border: 5px solid red;
     z-index: 3;
-    padding-top: 100px;
+    padding-top: 80px;
     h1{
         font-family: $header-font;
         color: $primary-dark;
         margin: 0;
         margin: 0 auto;
         width: fit-content;
-        font-size: 44px;
+        font-size: 36px;
+        margin-bottom: 30px;
     }
     
 }
 
+.menu{
+    width: 1000px;
+    margin: 0 auto;
+    -webkit-padding-start: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    li{
+        position: relative;
+        width: 200px;
+        text-align: center;
+        color: $primary-gray;
+        cursor: pointer;
+        &.active{
+            color: $primary;
+            text-decoration: underline;
+            // ::after{
+            //     content:'';
+            //     height: 3px;
+            //     position: relative;
+            //     width: 10px;
+            //     background-color: $primary;
+            // }
+        }
+    }
+}
+
 .projects{
-    width: 900px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    min-height: 100vh;
 }
 
 @media screen and (max-width: 900px) {
