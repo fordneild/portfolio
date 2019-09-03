@@ -38,9 +38,20 @@ class Project extends React.Component {
                 >
                 </div>
                 <div className="rising-content">
-                    <h2>{title}</h2>
-                    <h4>{company}</h4>
-
+                    <h2 className = "title">{title}</h2>
+                    <h4 className="company">{company}</h4>
+                    <h3 className={`learn-more ${dark? "dark" : ""}`}>Learn More</h3>
+                    <div className="about">
+                        <p>Year: <span>{year}</span></p>
+                        {role && <p>Role: <span>{role}</span></p>}
+                    </div>
+                    <ul className={`technologies ${dark? "dark" : ""}`}>
+                        {technologies.map((technology, index)=> {
+                            return(
+                                <li key={index}>{technology}</li>
+                            )
+                        })}
+                    </ul>
                 </div>
             </div>
         )

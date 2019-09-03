@@ -31,7 +31,7 @@
         company: "WebDev Mumbai",
         technologies: ["T-SQL", "ASP.Net","C#"],
         image: "https://images.unsplash.com/photo-1552133457-ce1d2d33cdfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80",
-        imageTop: "-370px",
+        imageTop: "-268px",
         dark: false,
         gradient: "linear-gradient(225deg, rgba(82,96,98,1) 26%, rgba(155,136,129,1) 70%, rgba(188,139,101,1) 89%)",
         category: "Web Development"
@@ -47,37 +47,36 @@
         imageLeft: "-25px",
         dark: false,
         gradient: "linear-gradient(122deg, rgba(191,191,191,1) 58%, rgba(36,49,143,1) 70%, rgba(179,39,35,1) 81%, rgba(191,191,191,1) 98%)",
-        category: "Web Development"
+        category: "Data Structures"
 
     },
     {
         title: "Binary Text Classification",
         year: "2018",
-        role: "Student",
         company: "Personal Project",
         technologies: ["TensorFLow","NumPym","Pandas","Python"],
-        image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",
-        dark: false,
-        gradient: "linear-gradient(45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        image: require("../../assets/projectPhotos/thumbs-up-thumbs-down.jpg"),
+        imageTop: "5px",
+        dark: true,
+        gradient: "linear-gradient(0deg, rgba(239,91,109,1) 0%, rgba(78,175,124,1) 100%)",
         category: "Machine Learning"
 
     },
     {
         title: "Median Regression Analysis",
         year: "2018",
-        role: "Student",
         company: "Personal Project",
         technologies: ["TensorFLow","NumPym","Pandas","Python"],
-        image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",
-        dark: false,
-        gradient: "linear-gradient(45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        image: "https://static.wixstatic.com/media/abed82_b0e5acddebbe48e4805c5c2603ffcf67~mv2.jpg",
+        imageTop: "-64px",
+        dark: true,
+        gradient: "linear-gradient(326deg, rgba(164,164,152,1) 20%, rgba(255,166,165,1) 49%, rgba(255,255,255,1) 78%)",
         category: "Machine Learning"
 
     },
     {
         title: "Image classification",
         year: "2018",
-        role: "Student",
         company: "Personal Project",
         technologies: ["TensorFLow","NumPym","Pandas","Python"],
         image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",

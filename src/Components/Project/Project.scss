@@ -8,6 +8,7 @@
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
     color: white;
     background-color: black;
@@ -32,18 +33,89 @@
         margin: 0 auto;
         height: 100%;
         padding: 25px;
-        h2{
+        box-sizing: border-box;
+        .title{
             margin: 0;
             font-size: 30px;
             font-family: $header-font;
-            font-weight: 800px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            //font-weight: normal;
             margin-bottom: 10px;
         }
-        h4{
+        .company{
             margin: 0;
+            font-family: $body-font;
+            font-size: 18px;
+            font-weight: lighter;
+            margin-bottom: 70px;
+        }
+
+        .learn-more{
+            position: relative;
             font-family: $body-font;
             font-size: 20px;
             font-weight: bold;
+            width: fit-content;
+            margin-bottom: 120px;
+            cursor: pointer;
+            &::after{
+                content: ' ';
+                width: 17px;
+                //width: 0px;
+                height: 2px;
+                background-color: white;
+                position: absolute;
+                bottom: 0;
+                left: 1px;
+                transition: width 250ms ease-in-out;
+            }
+            &.dark{
+                &::after{
+                    background-color: black;
+                }
+            }
+
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+
+        .about{
+            display: flex;
+            p{
+                font-size: 16px;
+                margin: 0;
+
+                margin-right: 20px;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .technologies{
+            display: flex;
+            -webkit-padding-start: 0px;
+            list-style-type: none;
+            cursor: default;
+            li{
+                padding: 2px 5px;
+                font-family: $header-font;
+                margin-right: 10px;
+                background-color: black;
+                font-size: 12px;
+            }
+            &.dark{
+                li{
+                    background-color: black;
+                    color: white;
+                }
+
+            }
+            
         }
 
     }
@@ -57,4 +129,20 @@
         }
     }
 
+}
+
+@media screen and (max-width: 600px) {
+    .project{
+        width: 360px;
+        height: 250px;
+        margin: 15px 0px;
+        .title{
+            width: 90%;
+            font-size: 20px;
+        }
+        .rising-content{
+            padding: 15px;
+            transform: translateY(120px);
+        }
+    }
 }

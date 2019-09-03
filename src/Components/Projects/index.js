@@ -8,15 +8,18 @@ class Projects extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            activeFilter: "All"
+            activeFilter: this.all
         }
     }
+
+    all = "All Projects"
 
     getCategories(){
         let categories =  [...new Set(data.map((cur) =>{
             return(cur.category)
         }))]
-        categories.splice(0,0, "All")
+        categories.splice(0,0, this.all)
+        categories.sort()
         return categories;
     }
 
@@ -36,7 +39,7 @@ class Projects extends React.Component{
                     {this.getCategories().map((filter, index) => {
                         return(
                             <li 
-                            className={activeFilter===filter? "active" : null} 
+                            className={`${activeFilter===filter? "active" : ""} ${filter===this.all? "all" : ""}`}
                             key={index}
                             onClick={() => this.handleFilterClick(filter)}>{filter}</li>
                         )
@@ -44,7 +47,7 @@ class Projects extends React.Component{
                 </ul>
                 <div className="projects">
                     {data.filter((projectData) => {
-                        if(activeFilter === "All"){
+                        if(activeFilter === this.all){
                             return true
                         }else{
                             return projectData.category === activeFilter;
