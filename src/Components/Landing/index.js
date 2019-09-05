@@ -60,6 +60,7 @@ class Landing extends React.Component {
         this.setState({
             isVisible: isVisible
         })
+        this.props.toggleLandingVisible(isVisible)
     }
 
 
@@ -69,7 +70,8 @@ class Landing extends React.Component {
         return(
             <VisibilitySensor partialVisibility={true} onChange={this.onChange}>
                 <section className="landing">
-                <img className={isVisible? "fixed": null} src={LandingImage}/>
+                    <a id="#home"></a>
+                    <img className={isVisible? "fixed": null} src={LandingImage}/>
                     <div className={`landing__intro ${!isVisible? "gone": ""}`}>
                         <div className="text">
                             <h4>Meet Me</h4>

@@ -25,7 +25,6 @@ class Project extends React.Component {
     render(){
         const {state, styles, props} = this;
         const {image, title, role, year, company ,technologies, dark, gradient, imageTop, imageLeft, imageMask} = props;
-        console.log("Project props",props)
         //const {active} = state;
         return(
             <div className={`project ${dark? "dark" : ""}`}

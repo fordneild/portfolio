@@ -34,6 +34,7 @@ class Projects extends React.Component{
 
         return(
             <div className="projects--container">
+                <a id="projects" />
                 <h1>Projects</h1>
                 <ul className="menu">
                     {this.getCategories().map((filter, index) => {
