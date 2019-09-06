@@ -91,9 +91,10 @@
         role: "Front-End Developer",
         company: "PBS x the Atlantic",
         technologies: ["jQuery","Javascript","HTML","Sass"],
-        image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",
-        dark: false,
-        gradient: "linear-gradient(45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        image: require("../../assets/projectPhotos/to_pledge_allegiance_header_modified.jpg"),
+        dark: true,
+
+        gradient: "linear-gradient(124deg, rgba(255,255,255,1) 27%, rgba(206,187,84,1) 71%, rgba(153,182,187,1) 87%, rgba(246,136,65,1) 97%)",
         category: "Web Development"
     },
     {
@@ -102,9 +103,10 @@
         role: "Front-End Developer",
         company: "Forevermark x the Atlantic",
         technologies: ["jQuery","Javascript","HTML","CSS"],
-        image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",
+        image: require("../../assets/projectPhotos/forevermark-project-photo1.png"),
+        imageLeft: "-37px",
         dark: false,
-        gradient: "linear-gradient(45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        gradient: "linear-gradient(52deg, rgba(216,175,183,1) 11%, rgba(216,175,183,1) 61%, rgba(243,232,232,1) 76%)",
         category: "Web Development"
     },
     {

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.scss'
+import Resume from '../../assets/docs/Resume.pdf'
 
 class Navbar extends React.Component {
     constructor(props){
@@ -54,7 +55,7 @@ class Navbar extends React.Component {
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">CV</a></li>
+                    <li><a href={Resume} target='_blank'>CV</a></li>
                 </ul>
     
             </div>

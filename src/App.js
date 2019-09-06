@@ -4,6 +4,7 @@ import './App.css';
 import Landing from './Components/Landing'
 import Navbar from './Components/Navbar'
 import Projects from './Components/Projects/'
+import About from  './Components/About'
 import { type } from 'os';
 
 class App extends React.Component {
@@ -15,7 +16,8 @@ class App extends React.Component {
   }
 
   toggleLandingVisible = (boolean) => {
-    if(typeof(boolean) === 'bool'){
+    if(typeof(boolean) === 'boolean'){
+      console.log("landingVisible: ", boolean)
       this.setState({
         landingVisible: boolean
       })
@@ -32,8 +34,10 @@ class App extends React.Component {
     const {landingVisible} = state;
     return (
       <div className="content">
-        <Navbar dark={landingVisible? true: false}/>
+        <Navbar dark={!landingVisible? true: false}/>
         <Landing toggleLandingVisible={this.toggleLandingVisible}/>
+        <About />
+
         <Projects />
       </div>
     );

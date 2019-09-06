@@ -11,8 +11,7 @@
     box-sizing: border-box;
     z-index:2;
     background-color: transparent;
-    transition: background-color 100ms ease-in-out;
-    transition: transform 100ms ease-in-out;
+    transition: transform 100ms ease-in-out, background-color 500ms ease-in-out;
     &.dark{
         background-color: $primary-dark;
     }
