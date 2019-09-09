@@ -79,9 +79,9 @@
         year: "2018",
         company: "Personal Project",
         technologies: ["TensorFLow","NumPym","Pandas","Python"],
-        image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",
-        dark: false,
-        gradient: "linear-gradient(45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        image: require("../../assets/projectPhotos/imageClassification2.jpg"),
+        dark: true,
+        gradient: "linear-gradient(167deg, rgba(255,255,255,1) 52%, rgba(255,0,0,1) 60%, rgba(0,0,255,1) 68%, rgba(255,255,255,1) 100%)",
         category: "Machine Learning"
 
     },
@@ -115,9 +115,10 @@
         role: "Student",
         company: "Johns Hopkins University",
         technologies: ["Java"],
-        image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",
-        dark: false,
-        gradient: "linear-gradient(45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        image: require("../../assets/projectPhotos/hashTable2.jpg"),
+
+        dark: true,
+        gradient: "linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(7,255,255,1) 39%, rgba(170,238,204,1) 51%, rgba(170,238,204,1) 69%, rgba(168,168,255,1) 73%, rgba(156,255,156,1) 77%)",
         category: "Data Structures"
     },
     {
@@ -126,20 +127,21 @@
         role: "Student",
         company: "Johns Hopkins University",
         technologies: ["Java"],
-        image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",
-        dark: false,
-        gradient: "linear-gradient(45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        image: require("../../assets/projectPhotos/7DegreesOfKevinBacon.jpg"),
+        imageLeft: "-190px",
+        dark: true,
+        gradient: "linear-gradient(170deg, rgba(255,255,255,1) 19%, rgba(255,216,110,1) 36%, rgba(109,207,158,1) 62%, rgba(255,255,255,1) 86%)",
         category: "Data Structures"
     },
     {
-        title: "Multilevel Hash Structure",
+        title: "Hash Tree",
         year: "2017",
         role: "Student",
         company: "Johns Hopkins University",
         technologies: ["C++"],
-        image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",
+        image: require("../../assets/projectPhotos/hashTree4.jpg"),
         dark: false,
-        gradient: "linear-gradient(45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        gradient: "linear-gradient(0deg, rgba(239,226,184,1) 17%, rgba(29,206,255,1) 19%, rgba(29,206,255,1) 27%, rgba(48,129,184,1) 38%, rgba(151,198,76,1) 40%, rgba(97,174,255,1) 99%)",
         category: "Data Structures"
 
     },
@@ -149,9 +151,9 @@
         role: "Student",
         company: "Johns Hopkins University",
         technologies: ["C++"],
-        image: "https://assets.teenvogue.com/photos/5cd305f454a13460a087a609/master/pass/00-story-johns-hopkins.jpg",
-        dark: false,
-        gradient: "linear-gradient(45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        image: require("../../assets/projectPhotos/skiplist.jpg"),
+        dark: true,
+        gradient: "linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(1,237,136,1) 94%, rgba(0,250,247,1) 100%)",
         category: "Data Structures"
     },
  ]

@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar'
 import Projects from './Components/Projects/'
 import About from  './Components/About'
 import { type } from 'os';
+import ContactMe from './Components/ContactMe/';
 
 class App extends React.Component {
   constructor(props){
@@ -39,6 +40,8 @@ class App extends React.Component {
         <About />
 
         <Projects />
+        <ContactMe />
+
       </div>
     );
   }
