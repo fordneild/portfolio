@@ -81,7 +81,7 @@
         technologies: ["TensorFLow","NumPym","Pandas","Python"],
         image: require("../../assets/projectPhotos/imageClassification2.jpg"),
         dark: true,
-        gradient: "linear-gradient(167deg, rgba(255,255,255,1) 52%, rgba(255,0,0,1) 60%, rgba(0,0,255,1) 68%, rgba(255,255,255,1) 100%)",
+        gradient: "linear-gradient(153deg, rgba(255,255,255,1) 52%, rgba(255,0,0,1) 60%, rgba(0,0,255,1) 68%, rgba(255,255,255,1) 100%)",
         category: "Machine Learning"
 
     },
@@ -141,7 +141,9 @@
         technologies: ["C++"],
         image: require("../../assets/projectPhotos/hashTree4.jpg"),
         dark: false,
-        gradient: "linear-gradient(0deg, rgba(239,226,184,1) 17%, rgba(29,206,255,1) 19%, rgba(29,206,255,1) 27%, rgba(48,129,184,1) 38%, rgba(151,198,76,1) 40%, rgba(97,174,255,1) 99%)",
+        //gradient: "linear-gradient(0deg, rgba(239,226,184,1) 17%, rgba(29,206,255,1) 19%, rgba(29,206,255,1) 27%, rgba(48,129,184,1) 38%, rgba(151,198,76,1) 40%, rgba(97,174,255,1) 99%)",
+        //gradient: "linear-gradient(0deg, rgba(239,226,184,1) 9%, rgba(29,206,255,1) 25%, rgba(48,129,184,1) 33%, rgba(151,198,76,1) 53%, rgba(97,174,255,1) 99%)",
+        gradient: "linear-gradient(0deg, rgba(239,226,184,1) 12%, rgba(29,206,255,1) 27%, rgba(151,198,76,1) 53%, rgba(97,174,255,1) 99%)",
         category: "Data Structures"
 
     },
