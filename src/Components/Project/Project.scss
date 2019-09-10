@@ -120,7 +120,7 @@
         }
 
     }
-    &:hover{
+    &:hover, &:active{
         .gradient{
             opacity: 1;
         }
