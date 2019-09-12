@@ -30,7 +30,8 @@
     .contact-me-icons{
         position: absolute;
         top: 36%;
-        left: 30%;
+        left: 50%;
+        transform: translateX(-50%);
         -webkit-padding-start: 0px;
         display: flex;
         list-style-type: none;
