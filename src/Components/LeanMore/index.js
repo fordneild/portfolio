@@ -33,6 +33,7 @@ class LearnMore extends React.Component {
                     {/* <div onClick={() => {props.toggleModal(false)}} className="close">
                         <CloseButton color="white"/>
                     </div> */}
+                    {/* <div className="mask" /> */}
                 </div>
                 <div className="fill-parent" onClick={this.handleClick}/>
             </div>
