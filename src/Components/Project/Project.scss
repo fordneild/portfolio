@@ -154,7 +154,6 @@
                 margin-bottom: 13vw;
             }
             .about{
-                justify-self: baseline;
                 p{
                     font-size: 3vw;
                 }
@@ -163,7 +162,8 @@
                 li{
                     font-size: 3vw;
                     font-weight: bold;
-                    min-width: 3vw;
+                    min-height: 3vw;
+                    background-color: green;
                 }
             }
         }
