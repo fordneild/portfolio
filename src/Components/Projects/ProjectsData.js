@@ -8,7 +8,8 @@
         image: "https://images.unsplash.com/photo-1510605395823-530474d7490f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1568&q=80",
         dark: false,
         gradient: "linear-gradient(-45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
-        category: "Web Development"
+        category: "Web Development",
+        liveLink: "https://www.way2b1.com/"
     },
     {
         title: "Forager One Website",
@@ -21,7 +22,8 @@
         //imageTop: "-20px",
         dark: true,
         gradient: "linear-gradient(135deg, rgba(54,191,255,1) 33%, rgba(246,225,105,1) 65%, rgba(255,255,255,1) 90%)",
-        category: "Web Development"
+        category: "Web Development",
+        liveLink: "https://foragerone.com/"
 
     },
     {
@@ -93,9 +95,9 @@
         technologies: ["jQuery","Javascript","HTML","Sass"],
         image: require("../../assets/projectPhotos/to_pledge_allegiance_header_modified.jpg"),
         dark: true,
-
         gradient: "linear-gradient(124deg, rgba(255,255,255,1) 27%, rgba(206,187,84,1) 71%, rgba(153,182,187,1) 87%, rgba(246,136,65,1) 97%)",
-        category: "Web Development"
+        category: "Web Development",
+        liveLink: "https://fordneild.github.io/pbs.html"
     },
     {
         title: "Forevermark Diamonds",
@@ -107,7 +109,8 @@
         imageLeft: "-37px",
         dark: false,
         gradient: "linear-gradient(52deg, rgba(216,175,183,1) 11%, rgba(216,175,183,1) 61%, rgba(243,232,232,1) 76%)",
-        category: "Web Development"
+        category: "Web Development",
+        liveLink: "https://fordneild.github.io/forevermark.html"
     },
     {
         title: "Hash Map",
@@ -141,8 +144,6 @@
         technologies: ["C++"],
         image: require("../../assets/projectPhotos/hashTree4.jpg"),
         dark: false,
-        //gradient: "linear-gradient(0deg, rgba(239,226,184,1) 17%, rgba(29,206,255,1) 19%, rgba(29,206,255,1) 27%, rgba(48,129,184,1) 38%, rgba(151,198,76,1) 40%, rgba(97,174,255,1) 99%)",
-        //gradient: "linear-gradient(0deg, rgba(239,226,184,1) 9%, rgba(29,206,255,1) 25%, rgba(48,129,184,1) 33%, rgba(151,198,76,1) 53%, rgba(97,174,255,1) 99%)",
         gradient: "linear-gradient(0deg, rgba(239,226,184,1) 12%, rgba(29,206,255,1) 27%, rgba(151,198,76,1) 53%, rgba(97,174,255,1) 99%)",
         category: "Data Structures"
 

@@ -29,7 +29,7 @@ class Projects extends React.Component{
         })
     }
     render(){
-        const {state} = this;
+        const {state, props} = this;
         const {activeFilter} = state;
 
         return(

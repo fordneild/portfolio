@@ -16,6 +16,16 @@
         color: $primary-dark;
         background-color: white;
     }
+    
+    &:hover, &:active, &.hover-effects{
+        .gradient{
+            opacity: 1;
+        }
+
+        .rising-content{
+            transform: translateY(0px);
+        }
+    }
 
     .gradient{
         width: 100%;
@@ -52,7 +62,7 @@
             margin-bottom: 70px;
         }
 
-        .learn-more{
+        .learn-more-button{
             position: relative;
             font-family: $body-font;
             font-size: 20px;
@@ -119,15 +129,6 @@
             
         }
 
-    }
-    &:hover, &:active{
-        .gradient{
-            opacity: 1;
-        }
-
-        .rising-content{
-            transform: translateY(0px);
-        }
     }
 
 }

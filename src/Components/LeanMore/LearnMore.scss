@@ -1,0 +1,79 @@
+@import '../../_variables.scss';
+.learn-more--overlay{
+    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+    // background-color: green;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    &.hidden{
+        display: none;
+    }
+    .learn-more{
+        margin-top: 80px;
+        background-color: $primary;
+        width: 40%;
+        max-height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 4;
+        color: $primary-light;
+        overflow-y: scroll;
+        h3{
+            font-family: $header-font;
+            font-size: 30px;
+            margin: 10px 0px;
+        }
+        p{
+            margin: 30px 50px;
+        }
+        .image--container{
+            width: 100%;
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-around;
+            width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .close{
+            position: absolute;
+            top: -35px;
+            right: -35px;
+            cursor: pointer;
+            height: min-content;
+            background-color: green;
+            svg{
+                display: block;
+            }
+        }
+        &.dark{
+            color: $primary;
+            background-color: $primary-light;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+          }
+    }
+    .fill-parent{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+    }
+}

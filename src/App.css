@@ -23,6 +23,17 @@
   color: #61dafb;
 }
 
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* .content.disable-scroll{
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+} */
+
 
 
 @keyframes App-logo-spin {

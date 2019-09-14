@@ -18,7 +18,6 @@ class App extends React.Component {
 
   toggleLandingVisible = (boolean) => {
     if(typeof(boolean) === 'boolean'){
-      console.log("landingVisible: ", boolean)
       this.setState({
         landingVisible: boolean
       })
@@ -41,6 +40,7 @@ class App extends React.Component {
 
         <Projects />
         <ContactMe />
+        {/* <LearnMore /> */}
 
       </div>
     );

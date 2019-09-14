@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://fordneild.github.io/portfolio",
   "dependencies": {
+    "body-scroll-lock": "^2.6.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0",

@@ -35,39 +35,8 @@
         -webkit-padding-start: 0px;
         display: flex;
         list-style-type: none;
-        .icon--container{
+        li{
             margin-right: 20px;
-            .link{
-                text-decoration: none;
-                .icon--background{
-                    background-color: $primary;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: auto;
-                    box-sizing: border-box;
-                    transition: background-color 500ms ease-in-out;
-                    i{
-                        font-size: 30px;
-                        height: 30px;
-                        width: 30px;
-                        margin: 10px;
-                        padding: 0;
-                        color: white;
-                        display: "block";
-                        text-align: center;
-                        transition: "color 500ms ease-in-out";
-                    }
-
-                    &:hover{
-                        background-color: white;
-                        i{
-                            color: $primary;
-                        }
-                    }
-                }
-            }
         }
     }
 }

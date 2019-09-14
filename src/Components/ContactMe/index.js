@@ -1,49 +1,38 @@
 import React from 'react'
 import './ContactMe.scss'
+import Icon from '../Icon'
 
-const iconStyles = {
-        fontSize: "30px",
-        height: "30px",
-        margin: "0",
-        padding: "0",
-        color: "white",
-        display: "block",
-        transition: "color 500ms ease-in-out",
+const IconsData = [
+    {
+        name: "fa fa-codepen",
+        link: "https://codepen.io/fordneild"
+    },
+    {
+        name: "fa fa-linkedin",
+        link: "https://www.linkedin.com/in/ford-neild/"
+    },
+    {
+        name: "fa fa-github",
+        link: "https://github.com/fordneild"
+    },
+    {
+        name: "fa fa-github",
+        link: "https://codepen.io/fordneild"
     }
+]
 const ContactMe = () => {
     return(
     <div className="contact-me--container">
         <h3 className="subheader">Wanna work together,<br/> or have comments on my work?</h3>
         <h1 className="header">Reach Out!</h1>
         <ul className="contact-me-icons">
-            <li className="icon--container">
-                <a className="link" target="_blank" href="https://codepen.io/fordneild">
-                    <div className="icon--background">
-                        <i className="fa fa-codepen"></i>
-                    </div>
-                </a>
-            </li>
-            <li className="icon--container">
-                <a className="link"target="_blank" href="https://www.linkedin.com/in/ford-neild/">
-                    <div className="icon--background">
-                        <i className="fa fa-linkedin"></i>
-                    </div>
-                </a>
-            </li>
-            <li className="icon--container">
-                <a className="link"target="_blank" href="https://github.com/fordneild">
-                    <div className="icon--background">
-                        <i className="fa fa-github"></i>
-                    </div>
-                </a>
-            </li>
-            <li className="icon--container">
-                <a className="link" target="_blank" href="https://codepen.io/fordneild">
-                    <div className="icon--background">
-                        <i className="fa fa-github"></i>
-                    </div>
-                </a>
-            </li>
+            {IconsData.map((iconData, index) => {
+                return(
+                    <li key={index}>
+                        <Icon {...iconData} dark="true"/>
+                    </li>
+                )
+            })}
         </ul>
     </div>
     )

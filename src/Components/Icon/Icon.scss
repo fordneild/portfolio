@@ -1,0 +1,46 @@
+@import '../../variables';
+
+.icon--container{
+    text-decoration: none;
+    div{
+        background-color: $primary-light;
+        color: $primary;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        box-sizing: border-box;
+        transition: all 200ms ease-in-out;
+    }
+    i{
+        font-size: 30px;
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        padding: 0;
+        display: "block";
+        text-align: center;
+    }
+    &:hover{
+        div{
+            background-color: $primary;
+            color: $primary-light;
+
+        }
+
+    }
+    &.dark{
+        div{
+
+            background-color: $primary;
+            color: $primary-light;
+        }
+        &:hover{
+            div{
+                color: $primary;
+                background-color: $primary-light;
+            }
+        }
+    }
+}
