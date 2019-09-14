@@ -8,7 +8,7 @@
     justify-content: center;
     background-color: $primary;
     height: 100vh;
-    width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
     z-index: -1;
     >img{
@@ -19,15 +19,17 @@
     position: fixed;
   }
   .landing__intro {
-    position: absolute;
-    top: 32vh;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 400px;
+    // position: absolute;
+    // top: 32vh;
+    // left: 50%;
+    // transform: translateX(-50%);
+    margin-top: 32vh;
+    // min-width: 375px;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: default;
+    z-index: 0;
     h1{
         font-size: 7.25vh;
         text-align: center;

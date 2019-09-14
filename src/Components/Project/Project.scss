@@ -145,15 +145,31 @@
             padding: 15px;
             height: 100%;
             transform: translateY(60%);
+            display: flex;
+            flex-direction: column;
+            // justify-content: space-between;
             .title{
-
+                font-size: 6vw;
             }
             .company{
                 margin-bottom: 0px;
 
             }
             .learn-more-button{
-                margin-bottom: 18vw;
+                font-size: 4.5vw;
+                margin-bottom: 13vw;
+            }
+            .about{
+                justify-self: baseline;
+                p{
+                    font-size: 3vw;
+                }
+            }
+            .technologies{
+                li{
+                    font-size: 3vw;
+                    font-weight: bold;
+                }
             }
         }
     }

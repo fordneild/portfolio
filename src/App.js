@@ -40,8 +40,6 @@ class App extends React.Component {
 
         <Projects />
         <ContactMe />
-        {/* <LearnMore /> */}
-
       </div>
     );
   }
