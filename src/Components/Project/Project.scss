@@ -16,7 +16,7 @@
         color: $primary-dark;
         background-color: white;
     }
-    
+
     &:hover, &:active, &.hover-effects{
         .gradient{
             opacity: 1;
@@ -135,16 +135,26 @@
 
 @media screen and (max-width: 600px) {
     .project{
-        width: 360px;
-        height: 250px;
-        margin: 15px 0px;
+        width: 90vw;
+        height: 63.15vw;
         .title{
             width: 90%;
             font-size: 20px;
         }
         .rising-content{
             padding: 15px;
-            transform: translateY(120px);
+            height: 100%;
+            transform: translateY(60%);
+            .title{
+
+            }
+            .company{
+                margin-bottom: 0px;
+
+            }
+            .learn-more-button{
+                margin-bottom: 18vw;
+            }
         }
     }
 }

@@ -16,8 +16,8 @@ const IconsData = [
         link: "https://github.com/fordneild"
     },
     {
-        name: "fa fa-github",
-        link: "https://codepen.io/fordneild"
+        name: "fa fa-envelope",
+        link: "mailto: hanfordn35@gmail.com"
     }
 ]
 const ContactMe = () => {

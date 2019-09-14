@@ -22,11 +22,11 @@
 .App-link {
   color: #61dafb;
 }
-
-::-webkit-scrollbar {
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+body{
+  max-width: 100vw;
+  overflow-x: hidden;
 }
+
 
 /* .content.disable-scroll{
   max-height: 100vh;

@@ -13,11 +13,16 @@
     z-index: 3;
     &.hidden{
         display: none;
+        .learn-more{
+            //this should reset scroll
+            overflow-y: hidden;
+        }
     }
     .learn-more{
         margin-top: 80px;
         background-color: $primary;
-        width: 40%;
+        width: 80%;
+        max-width: 600px;
         max-height: 600px;
         display: flex;
         flex-direction: column;
@@ -63,10 +68,10 @@
             color: $primary;
             background-color: $primary-light;
         }
-        ::-webkit-scrollbar {
+        &::-webkit-scrollbar {
             width: 0px;  /* Remove scrollbar space */
             background: transparent;  /* Optional: just make scrollbar invisible */
-          }
+        }
     }
     .fill-parent{
         position: fixed;
