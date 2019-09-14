@@ -117,14 +117,8 @@
                 font-family: $header-font;
                 margin-right: 10px;
                 background-color: black;
+                color: white;
                 font-size: 12px;
-            }
-            &.dark{
-                li{
-                    background-color: black;
-                    color: white;
-                }
-
             }
             
         }
@@ -169,6 +163,7 @@
                 li{
                     font-size: 3vw;
                     font-weight: bold;
+                    min-width: 3vw;
                 }
             }
         }
