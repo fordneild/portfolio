@@ -1,18 +1,26 @@
 import React from 'react'
 import './Projects.scss'
-
 import Project from '../Project'
+import LearnMore from '../LeanMore/'
 import data from './ProjectsData'
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 class Projects extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            activeFilter: this.all
+            activeFilter: this.all,
+            learnMoreData: null
         }
-    }
 
+    }
+    modalRef = React.createRef();
+    targetModalElement = null;
     all = "All Projects"
+
+    componentWillUnmount(){
+        clearAllBodyScrollLocks();
+    }
 
     getCategories(){
         let categories =  [...new Set(data.map((cur) =>{
@@ -23,6 +31,16 @@ class Projects extends React.Component{
         return categories;
     }
 
+    openModal = (learnMoreData) => {
+        this.setState({learnMoreData: learnMoreData})
+        disableBodyScroll(this.targetModalElement);
+    }
+    
+    closeModal = () => {
+        this.setState({learnMoreData: null})
+        enableBodyScroll(this.targetModalElement);
+    }
+
     handleFilterClick = (filter) => {
         this.setState({
             activeFilter: filter
@@ -30,7 +48,7 @@ class Projects extends React.Component{
     }
     render(){
         const {state, props} = this;
-        const {activeFilter} = state;
+        const {activeFilter, learnMoreData} = state;
 
         return(
             <div className="projects--container">
@@ -53,8 +71,9 @@ class Projects extends React.Component{
                         }else{
                             return projectData.category === activeFilter;
                         }
-                    }).map((projectData,index) => <Project key={index}{...projectData}/>)}
+                    }).map((projectData,index) => <Project openModal={this.openModal} key={index} data={projectData}/>)}
                 </div>
+                {learnMoreData != null ? <LearnMore closeModal={this.closeModal} data={learnMoreData}/> : null}
             </div>
         )
     }
