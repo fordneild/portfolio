@@ -60,12 +60,13 @@
         image: require("../../assets/projectPhotos/thumbs-up-thumbs-down.jpg"),
         imageTop: "5px",
         dark: true,
-        gradient: "linear-gradient(0deg, rgba(239,91,109,1) 0%, rgba(78,175,124,1) 100%)",
+        gradient: "linear-gradient(-90deg, rgba(239,91,109,1) 0%, rgba(78,175,124,1) 100%)",
+        githubLink:"https://github.com/fordneild/binary-classification-movies-review",
         category: "Machine Learning"
 
     },
     {
-        title: "Median Regression Analysis",
+        title: "Housing price prediction",
         year: "2018",
         company: "Personal Project",
         technologies: ["TensorFLow","NumPym","Pandas","Python"],
@@ -73,6 +74,7 @@
         imageTop: "-64px",
         dark: true,
         gradient: "linear-gradient(326deg, rgba(164,164,152,1) 20%, rgba(255,166,165,1) 49%, rgba(255,255,255,1) 78%)",
+        githubLink:"https://github.com/fordneild/median-price-prediction",
         category: "Machine Learning"
 
     },
@@ -84,6 +86,7 @@
         image: require("../../assets/projectPhotos/imageClassification2.jpg"),
         dark: true,
         gradient: "linear-gradient(153deg, rgba(255,255,255,1) 52%, rgba(255,0,0,1) 60%, rgba(0,0,255,1) 68%, rgba(255,255,255,1) 100%)",
+        githubLink:"https://github.com/fordneild/clothes-classification",
         category: "Machine Learning"
 
     },
@@ -97,7 +100,8 @@
         dark: true,
         gradient: "linear-gradient(124deg, rgba(255,255,255,1) 27%, rgba(206,187,84,1) 71%, rgba(153,182,187,1) 87%, rgba(246,136,65,1) 97%)",
         category: "Web Development",
-        liveLink: "https://fordneild.github.io/pbs.html"
+        liveLink: "https://fordneild.github.io/pbs.html",
+        githubLink: "https://github.com/fordneild/to-pledge-allegience"
     },
     {
         title: "Forevermark Diamonds",
@@ -110,7 +114,8 @@
         dark: false,
         gradient: "linear-gradient(52deg, rgba(216,175,183,1) 11%, rgba(216,175,183,1) 61%, rgba(243,232,232,1) 76%)",
         category: "Web Development",
-        liveLink: "https://fordneild.github.io/forevermark.html"
+        liveLink: "https://fordneild.github.io/forevermark.html",
+        githubLink: "https://github.com/fordneild/forevermark"
     },
     {
         title: "Hash Map",

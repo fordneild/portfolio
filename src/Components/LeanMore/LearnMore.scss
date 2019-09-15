@@ -11,13 +11,6 @@
     top: 0;
     left: 0;
     z-index: 3;
-    &.hidden{
-        display: none;
-        .learn-more{
-            //this should reset scroll
-            overflow-y: hidden;
-        }
-    }
     .learn-more{
         margin-top: 80px;
         background-color: $primary;
@@ -32,6 +25,7 @@
         z-index: 4;
         color: $primary-light;
         overflow-y: scroll;
+        border-radius: 30px;
         h3{
             font-family: $header-font;
             font-size: 30px;
@@ -51,17 +45,22 @@
             display: flex;
             justify-content: space-around;
             width: 200px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
 
         .close{
             position: absolute;
-            top: -35px;
-            right: -35px;
+            top: 15px;
+            right: 30px;
             cursor: pointer;
             height: min-content;
             svg{
                 display: block;
+            }
+            transform: scale(1.1);
+            transition: transform 100ms ease-in-out;
+            &:hover{
+                transform: scale(1.4)
             }
         }
         &.dark{

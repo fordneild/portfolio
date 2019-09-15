@@ -22,17 +22,18 @@ class LearnMore extends React.Component {
             <div className={`learn-more--overlay`}>
                 <div ref={this.modalRef}className={`learn-more ${dark? "dark" : ""}`}>
                     <h3>{title}</h3>
-                    <div className="image--container">
-                        <img src={image} alt={title} />
-                    </div>
-                    <p>{description}</p>
                     <div className="buttons">
                         {githubLink? <Icon link={githubLink} dark={!dark} name="fa fa-github"/>: null}
                         {liveLink? <Icon link={liveLink} dark={!dark}name="fa fa-external-link-square"/>: null}
                     </div>
-                    {/* <div onClick={() => {props.toggleModal(false)}} className="close">
-                        <CloseButton color="white"/>
-                    </div> */}
+                    <div className="image--container">
+                        <img src={image} alt={title} />
+                    </div>
+                    <p>{description}</p>
+
+                    <div onClick={this.handleClick} className="close">
+                        <CloseButton dark = {dark}/>
+                    </div>
                     {/* <div className="mask" /> */}
                 </div>
                 <div className="fill-parent" onClick={this.handleClick}/>

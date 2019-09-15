@@ -10,11 +10,10 @@ class Landing extends React.Component {
     this.state = {
       isVisible: false,
       reflectionStyles: {
-        filter: "blur(2px)",
+        filter: `blur(${this.INITIAL_BLUR}px)`,
         transform: "rotate(180deg) scale(-1,1.5) translateY(0px)"
       }
     };
-    this.reflectionRef = React.createRef();
   }
 
   INITIAL_BLUR = 2;
@@ -76,7 +75,6 @@ class Landing extends React.Component {
               <h4>Full Stack Developer</h4>
             </div>
             <div
-              ref={this.reflectionRef}
               className="text-relflection"
               style={this.state.reflectionStyles}
             >
