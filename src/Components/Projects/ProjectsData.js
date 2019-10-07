@@ -42,7 +42,7 @@
                 bullet1: "I implemented Angular and Bootstrap to maintain and update the site.",
                 bullet2: "I built a new sign up process to help distinguish between faculty, university admin, and student accounts.",
                 bullet3: "I helped redesign the front page interface to direct traffic towards the search page",
-                bullet4: "I Refactored and organized CSS code into the Block Element Modifier methodology."
+                bullet4: "I refactored and organized CSS code into the Block Element Modifier methodology."
             }
         }
 
@@ -86,7 +86,16 @@
         dark: true,
         gradient: "linear-gradient(-90deg, rgba(239,91,109,1) 0%, rgba(78,175,124,1) 100%)",
         githubLink:"https://github.com/fordneild/binary-classification-movies-review",
-        category: "Machine Learning"
+        category: "Machine Learning",
+        description: {
+            Background: "This was my third and most recent project using TensorFlow, a python machine learning library. The models were tasked with determining if a movie review was positive or negative. The models were trained with a dataset of 60,000 reviews for 20 epochs.",
+            What_I_Did: {
+                bullet1: "I tested small, medium and large neural networks to determine the optimal size.",
+                bullet2: "The medium performed the best and achieved 85% accuracy.",
+                bullet3: "I created two variations of the medium network to try and reduce overfitting.",
+                bullet4: "By implementing a drop-out layer, which randomly resets the neuron's weights, I was able to achieve a final accuracy of 87%."
+            }
+        }
 
     },
     {
