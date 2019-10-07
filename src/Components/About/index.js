@@ -4,6 +4,7 @@ import "./About.scss";
 const About = () => {
   return (
     <section className="about--container">
+      <a id="about" />
       <div className="sheered">
         <div className="reverse-sheered">
           <h1>about</h1>

@@ -23,6 +23,7 @@ const IconsData = [
 const ContactMe = () => {
     return(
     <div className="contact-me--container">
+        <a id="contact-me" />
         <h3 className="subheader">Wanna work together,<br/> or have comments on my work?</h3>
         <h1 className="header">Reach Out!</h1>
         <ul className="contact-me-icons">

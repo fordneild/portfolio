@@ -1,5 +1,6 @@
  const projectsData = [
     {
+        show: 1,
         title: "Way2B1 Website and CMS",
         year: "2019",
         role: "Full-Stack Developer",
@@ -9,9 +10,20 @@
         dark: false,
         gradient: "linear-gradient(-45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
         category: "Web Development",
-        liveLink: "https://www.way2b1.com/"
+        liveLink: "https://www.way2b1.com/",
+        description: {
+            Background: "Way2B1 makes software to simplify wealth management and streamline approval for investments. They currently offer a suite of user-friendly products to help do this. Their website, however, was not up to their standards.",
+            What_I_Did: {
+                bullet1: "I built a clear and sleek React-based website to serve the first point of contact with potential clients.",
+                bullet2: "I designed and developed a content management system with Firebase to allow higher-ups to easily change the site’s images and copy without needing to touch the codebase.",
+                bullet3: "There were 5 views in total each with custom-made responsive components such as carousels, accordions, and modals.",
+                bullet4: "I created two React forms with unobtrusive user validation.",
+                bullet5: "I integrated the careers page with the Google Hire API to allow for dynamic job posting and applications."
+            }
+        }
     },
     {
+        show: 1,
         title: "Forager One Website",
         year: "2019",
         role: "Front-End Developer",
@@ -23,10 +35,20 @@
         dark: true,
         gradient: "linear-gradient(135deg, rgba(54,191,255,1) 33%, rgba(246,225,105,1) 65%, rgba(255,255,255,1) 90%)",
         category: "Web Development",
-        liveLink: "https://foragerone.com/"
+        liveLink: "https://foragerone.com/",
+        description: {
+            Background: "I worked part-time at a start-up on campus named ForagerOne for 5 months. ForgerOne helps undergraduate students find and apply to research positions. Near the conclusion of my time there, they received a contract from Johns Hopkins University. I left to focus on my studies and learn React in preparation for my summer internship at Way2B1.",
+            What_I_Did: {
+                bullet1: "I implemented Angular and Bootstrap to maintain and update the site.",
+                bullet2: "I built a new sign up process to help distinguish between faculty, university admin, and student accounts.",
+                bullet3: "I helped redesign the front page interface to direct traffic towards the search page",
+                bullet4: "I Refactored and organized CSS code into the Block Element Modifier methodology."
+            }
+        }
 
     },
     {
+        show: 0,
         title: "Financial trading CMS",
         year: "2019",
         role: "Data Architect and Developer",
@@ -40,6 +62,7 @@
 
     },
     {
+        show: 0,
         title: "Assembler and Disassembler",
         year: "2019",
         role: "Student",
@@ -53,6 +76,7 @@
 
     },
     {
+        show: 1,
         title: "Binary Text Classification",
         year: "2018",
         company: "Personal Project",
@@ -66,6 +90,7 @@
 
     },
     {
+        show: 1,
         title: "Housing price prediction",
         year: "2018",
         company: "Personal Project",
@@ -79,6 +104,7 @@
 
     },
     {
+        show: 1,
         title: "Image classification",
         year: "2018",
         company: "Personal Project",
@@ -91,6 +117,7 @@
 
     },
     {
+        show: 1,
         title: "To Pledge Allegience",
         year: "2018",
         role: "Front-End Developer",
@@ -104,6 +131,7 @@
         githubLink: "https://github.com/fordneild/to-pledge-allegience"
     },
     {
+        show: 1,
         title: "Forevermark Diamonds",
         year: "2018",
         role: "Front-End Developer",
@@ -118,6 +146,7 @@
         githubLink: "https://github.com/fordneild/forevermark"
     },
     {
+        show: 0,
         title: "Hash Map",
         year: "2018",
         role: "Student",
@@ -130,6 +159,7 @@
         category: "Data Structures"
     },
     {
+        show: 0,
         title: "7 Degrees of Kevin Bacon",
         year: "2018",
         role: "Student",
@@ -142,6 +172,7 @@
         category: "Data Structures"
     },
     {
+        show: 0,
         title: "Hash Tree",
         year: "2017",
         role: "Student",
@@ -154,6 +185,7 @@
 
     },
     {
+        show: 0,
         title: "Skip List",
         year: "2017",
         role: "Student",

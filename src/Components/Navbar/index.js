@@ -53,8 +53,8 @@ class Navbar extends React.Component {
                 <ul className="navbar__tabs">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact-me">Contact</a></li>
                     <li><a href={Resume} target='_blank'>CV</a></li>
                 </ul>
     

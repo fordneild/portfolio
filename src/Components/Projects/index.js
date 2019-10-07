@@ -6,7 +6,6 @@ import data from './ProjectsData'
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import VisibilitySensor from "react-visibility-sensor";
 
-
 class Projects extends React.Component{
     constructor(props){
         super(props)
@@ -14,10 +13,7 @@ class Projects extends React.Component{
             activeFilter: this.all,
             learnMoreData: null,
             isVisible: false,
-            backgroundStyles: {
-                backgroundPosition: "50% 50%",
-                backgroundSize: "100%"
-            }
+            backgroundStyles: this.DEFAULT_BACKGROUND_STYLES
         }
         this.containerRef = React.createRef();
 
@@ -25,6 +21,18 @@ class Projects extends React.Component{
     modalRef = React.createRef();
     targetModalElement = null;
     DISABLE_BG_ANIMATION = false;
+    DEFAULT_BACKGROUND_STYLES = {
+        backgroundPosition: "50% 50%",
+        backgroundSize: "100%"
+    }
+    MAX_WINDOW_WIDTH_FOR_ANIMATION = 1400;
+    MIN_WINDOW_WIDTH_FOR_ANIMATION = 600;
+
+    checkWindowSize(){
+        //returns true if within max and min
+        return !(window.innerWidth < this.MIN_WINDOW_WIDTH_FOR_ANIMATION || window.innerWidth > this.MAX_WINDOW_WIDTH_FOR_ANIMATION)
+    }
+
     all = "All Projects"
 
     // -------------------------------
@@ -53,7 +61,8 @@ class Projects extends React.Component{
   }
 
   updateBackground = () => {
-    if(this.containerRef.current){
+    const validWindowSize = this.checkWindowSize();
+    if(this.containerRef.current && validWindowSize){
         const {top, left} = this.containerRef.current.getBoundingClientRect();
         const minBackgroundSize = 100;
         const maxBackgroundSize = 120;
@@ -70,11 +79,16 @@ class Projects extends React.Component{
         this.setState({
           backgroundStyles: backgroundStyles
         });
-    }
+    // }else if(!validWindowSize){
+    //     this.setState({
+    //       backgroundStyles: this.DEFAULT_BACKGROUND_STYLES
+    //     });
+        }
   };
 
   onChange = isVisible => {
-    if (isVisible && !this.DISABLE_BG_ANIMATION) {
+    const validWindowSize = this.checkWindowSize();
+    if (isVisible && !this.DISABLE_BG_ANIMATION && validWindowSize) {
       window.addEventListener("scroll", this.updateBackground);
     } else {
       window.removeEventListener("scroll", this.updateBackground);
@@ -82,7 +96,6 @@ class Projects extends React.Component{
     this.setState({
       isVisible: isVisible
     });
-    // this.props.toggleLandingVisible(isVisible);
   };
     // -------------------------------
 
@@ -138,10 +151,14 @@ class Projects extends React.Component{
                     </ul>
                     <div className="projects">
                         {data.filter((projectData) => {
-                            if(activeFilter === this.all){
-                                return true
+                            if(projectData.show === 1){
+                                if(activeFilter === this.all){
+                                    return true
+                                }else{
+                                    return (projectData.category === activeFilter);
+                                }
                             }else{
-                                return projectData.category === activeFilter;
+                                return false
                             }
                         }).map((projectData,index) => <Project openModal={this.openModal} key={index} data={projectData}/>)}
                     </div>
