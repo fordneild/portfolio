@@ -8,7 +8,6 @@ import About from  './Components/About'
 import { type } from 'os';
 import ContactMe from './Components/ContactMe/';
 import Video from './Components/Video'
-import KatiesWorld from './Components/KatiesWorld';
 
 class App extends React.Component {
   constructor(props){
