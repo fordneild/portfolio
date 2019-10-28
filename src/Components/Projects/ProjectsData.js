@@ -109,7 +109,16 @@
         dark: true,
         gradient: "linear-gradient(326deg, rgba(164,164,152,1) 20%, rgba(255,166,165,1) 49%, rgba(255,255,255,1) 78%)",
         githubLink:"https://github.com/fordneild/median-price-prediction",
-        category: "Machine Learning"
+        category: "Machine Learning",
+        description: {
+            Background: "This was my second project using TensorFlow, a python machine learning library. The goal was to predict the cost of a house in Boston based off ten features",
+            // What_I_Did: {
+            //     bullet1: "I tested small, medium and large neural networks to determine the optimal size.",
+            //     bullet2: "The medium performed the best and achieved 85% accuracy.",
+            //     bullet3: "I created two variations of the medium network to try and reduce overfitting.",
+            //     bullet4: "By implementing a drop-out layer, which randomly resets the neuron's weights, I was able to achieve a final accuracy of 87%."
+            // }
+        }
 
     },
     {
@@ -122,7 +131,16 @@
         dark: true,
         gradient: "linear-gradient(153deg, rgba(255,255,255,1) 52%, rgba(255,0,0,1) 60%, rgba(0,0,255,1) 68%, rgba(255,255,255,1) 100%)",
         githubLink:"https://github.com/fordneild/clothes-classification",
-        category: "Machine Learning"
+        category: "Machine Learning",
+        description: {
+            Background: "This was my first project using TensorFlow, a python machine learning library. The models were tasked with categorizing images of clothing into 10 categories. The model achieved 91% accuracy. This is a classic example of image classification with nueral networks",
+            // What_I_Did: {
+            //     bullet1: "I tested small, medium and large neural networks to determine the optimal size.",
+            //     bullet2: "The medium performed the best and achieved 85% accuracy.",
+            //     bullet3: "I created two variations of the medium network to try and reduce overfitting.",
+            //     bullet4: "By implementing a drop-out layer, which randomly resets the neuron's weights, I was able to achieve a final accuracy of 87%."
+            // }
+        }
 
     },
     {
@@ -137,7 +155,16 @@
         gradient: "linear-gradient(124deg, rgba(255,255,255,1) 27%, rgba(206,187,84,1) 71%, rgba(153,182,187,1) 87%, rgba(246,136,65,1) 97%)",
         category: "Web Development",
         liveLink: "https://fordneild.github.io/pbs.html",
-        githubLink: "https://github.com/fordneild/to-pledge-allegience"
+        githubLink: "https://github.com/fordneild/to-pledge-allegience",
+        description: {
+            Background: "This was my final assignment while working at The Atlantic, Re:Think. I built an interactive single page website for a new Ken Burns Documentary on Netlfix.",
+            What_I_Did: {
+                bullet1: "I collaborated with a designer to create a beautiful, yet responsive web experience.",
+                bullet2: "I manipulated an imported audio player, thus saving significant amounts of time on a otherwise complicated component.",
+                bullet3: "I implemented jQuery to create appealing transitions between modals and pages.",
+                bullet4: "I sought CSS-first solutions to prioritize preformance and code simplicity."
+            }
+        }
     },
     {
         show: 1,
@@ -152,7 +179,14 @@
         gradient: "linear-gradient(52deg, rgba(216,175,183,1) 11%, rgba(216,175,183,1) 61%, rgba(243,232,232,1) 76%)",
         category: "Web Development",
         liveLink: "https://fordneild.github.io/forevermark.html",
-        githubLink: "https://github.com/fordneild/forevermark"
+        githubLink: "https://github.com/fordneild/forevermark",
+        description: {
+            Background: "This was my second assignment while working at The Atlantic, Re:Think. I developed a single page website for Forevermark Diamonds. The website was a multimedia article showcasing Diana Rau, a young entrepreneurial women.",
+            What_I_Did: {
+                bullet1: "I displayed unobstrusive video content using a content management system.",
+                bullet2: "I built the wesbite with a mobile-first methodology, ensuring a smooth responsive page at all window sizes."
+            }
+        }
     },
     {
         show: 0,

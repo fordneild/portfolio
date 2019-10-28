@@ -15,13 +15,11 @@ class LearnMore extends React.Component {
         if(description){
             return Object.entries(description)
             .map((section, index) => {
-                console.log("section", section)
                 if(section.length > 1){
                     const sectionHeader = section[0].replace(/_/g," ");
                     const sectionBody = section[1];
                     let sectionBodyJSX;
                     if(sectionHeader === "What I Did"){
-                        console.log("here")
                         sectionBodyJSX = 
                         <ul>
                             {Object.values(sectionBody).map((bullet, secondaryIndex) => {
@@ -52,8 +50,8 @@ class LearnMore extends React.Component {
         let {image, title, role, year, company ,technologies, dark, gradient, imageTop, imageLeft, githubLink, liveLink, description} = data;
         const sampleDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         //change to const for real
-        githubLink = githubLink || "https://github.com/fordneild"
-        description = description || sampleDescription;
+        // githubLink = githubLink || "https://github.com/fordneild"
+        // description = description || sampleDescription;
         return(
             <div className={`learn-more--overlay`}>
                 <div ref={this.modalRef}className={`learn-more ${dark? "dark" : ""}`}>

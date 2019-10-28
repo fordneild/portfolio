@@ -27,6 +27,10 @@ body{
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* .content.disable-scroll{
   max-height: 100vh;

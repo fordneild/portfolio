@@ -25,7 +25,7 @@ class Projects extends React.Component{
         backgroundPosition: "50% 50%",
         backgroundSize: "100%"
     }
-    MAX_WINDOW_WIDTH_FOR_ANIMATION = 1400;
+    MAX_WINDOW_WIDTH_FOR_ANIMATION = 1600;
     MIN_WINDOW_WIDTH_FOR_ANIMATION = 600;
 
     checkWindowSize(){
