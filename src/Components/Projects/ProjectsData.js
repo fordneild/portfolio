@@ -62,6 +62,28 @@
 
     },
     {
+        show: 1,
+        title: "Cache Simulator",
+        year: "2018",
+        role: "Student",
+        company: "Johns Hopkins University",
+        technologies: ["C++"],
+        image: "https://www.cbronline.com/wp-content/uploads/2016/06/what-is-cache-memory.jpg",
+        dark: false,
+        gradient: "linear-gradient(49deg, rgba(75,130,98,1) 20%, rgba(106,116,108.1) 58%, rgba(75,130,98,1) 93%)",
+        category: "Academia",
+        githubLink: "https://github.com/fordneild/cache-simulator",
+        description: {
+            Background: "This was my final project for my Computer System Fundamentals class. Using C++ we implemented different versions of a cache and observed thier preformance against various datasets.",
+            // What_I_Did: {
+            //     bullet1: "I tested small, medium and large neural networks to determine the optimal size.",
+            //     bullet2: "The medium performed the best and achieved 85% accuracy.",
+            //     bullet3: "I created two variations of the medium network to try and reduce overfitting.",
+            //     bullet4: "By implementing a drop-out layer, which randomly resets the neuron's weights, I was able to achieve a final accuracy of 87%."
+            // }
+        }
+    },
+    {
         show: 0,
         title: "Assembler and Disassembler",
         year: "2019",
@@ -72,9 +94,10 @@
         imageLeft: "-25px",
         dark: false,
         gradient: "linear-gradient(122deg, rgba(191,191,191,1) 58%, rgba(36,49,143,1) 70%, rgba(179,39,35,1) 81%, rgba(191,191,191,1) 98%)",
-        category: "Data Structures"
+        category: "Academia"
 
     },
+    
     {
         show: 1,
         title: "Binary Text Classification",
@@ -199,7 +222,7 @@
 
         dark: true,
         gradient: "linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(7,255,255,1) 39%, rgba(170,238,204,1) 51%, rgba(170,238,204,1) 69%, rgba(168,168,255,1) 73%, rgba(156,255,156,1) 77%)",
-        category: "Data Structures"
+        category: "Academia"
     },
     {
         show: 0,
@@ -212,7 +235,7 @@
         imageLeft: "-190px",
         dark: true,
         gradient: "linear-gradient(170deg, rgba(255,255,255,1) 19%, rgba(255,216,110,1) 36%, rgba(109,207,158,1) 62%, rgba(255,255,255,1) 86%)",
-        category: "Data Structures"
+        category: "Academia"
     },
     {
         show: 0,
@@ -224,7 +247,7 @@
         image: require("../../assets/projectPhotos/hashTree4.jpg"),
         dark: false,
         gradient: "linear-gradient(0deg, rgba(239,226,184,1) 12%, rgba(29,206,255,1) 27%, rgba(151,198,76,1) 53%, rgba(97,174,255,1) 99%)",
-        category: "Data Structures"
+        category: "Academia"
 
     },
     {
@@ -237,7 +260,7 @@
         image: require("../../assets/projectPhotos/skiplist.jpg"),
         dark: true,
         gradient: "linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(1,237,136,1) 94%, rgba(0,250,247,1) 100%)",
-        category: "Data Structures"
+        category: "Academia"
     },
  ]
 

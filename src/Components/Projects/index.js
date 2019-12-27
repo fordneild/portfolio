@@ -109,8 +109,8 @@ class Projects extends React.Component{
         let categories =  [...new Set(data.map((cur) =>{
             return(cur.category)
         }))]
-        categories.splice(0,0, this.all)
         categories.sort()
+        categories.splice(0,0, this.all)
         return categories;
     }
 
