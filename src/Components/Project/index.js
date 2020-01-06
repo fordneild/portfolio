@@ -23,7 +23,7 @@ class Project extends React.Component {
         const {state, styles, props} = this;
         const {learnMore, mobileTouch} = state;
         const {data, openModal} = props
-        const {image, title, role, year, company ,technologies, dark, gradient, imageTop, imageLeft, description} = data;
+        const {image, title, role, year, company ,technologies, dark, gradient, imageTop, imageLeft, description, addMask} = data;
         //const {active} = state;
         return(
             <div 
@@ -32,7 +32,12 @@ class Project extends React.Component {
                 // onMouseLeave={this.handleMouseLeave}
                 onTouchStart = {() => this.toggleMobileTouch(true)}
                 onTouchEnd = {() => this.toggleMobileTouch(false)}
-                style={{backgroundImage: `url(${image})`,backgroundPositionY: imageTop , backgroundPositionX: imageLeft}}
+                style={{backgroundImage: 
+                        `${(!dark && addMask)? "linear-gradient(0deg, rgba(0,0,0,0.4) 30%, rgba(255,255,255,0) 60%),": ""}
+                        url(${image})`,
+                        backgroundPositionY: imageTop,
+                        backgroundPositionX: imageLeft
+                    }}
                 > 
                 <div className="gradient"
                 style={{backgroundImage: gradient}}

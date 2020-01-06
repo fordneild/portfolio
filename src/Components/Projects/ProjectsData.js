@@ -1,15 +1,40 @@
  const projectsData = [
     {
         show: 1,
+        title: "Le Chiffre",
+        year: "2019",
+        company: "Personal Project",
+        technologies: ["React","Firebase"],
+        image: "https://images.unsplash.com/photo-1511193311914-0346f16efe90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80",
+        dark: false,
+        gradient: "linear-gradient(0deg, rgba(127,154,153,1) 0%, rgba(13,64,63,1) 100%)",
+        category: "Web Development",
+        addMask: true,
+        liveLink: "https://www.way2b1.com/",
+        description: {
+            Background: "Way2B1 makes software to simplify wealth management and streamline approval for investments. They currently offer a suite of user-friendly products to help do this. Their website, however, was not up to their standards.",
+            What_I_Did: {
+                bullet1: "I built a clear and sleek React-based website to serve the first point of contact with potential clients.",
+                bullet2: "I designed and developed a content management system with Firebase to allow higher-ups to easily change the site’s images and copy without needing to touch the codebase.",
+                bullet3: "There were 5 views in total each with custom-made responsive components such as carousels, accordions, and modals.",
+                bullet4: "I created two React forms with unobtrusive user validation.",
+                bullet5: "I integrated the careers page with the Google Hire API to allow for dynamic job posting and applications."
+            }
+        }
+    },
+    {
+        show: 1,
         title: "Way2B1 Website and CMS",
         year: "2019",
         role: "Full-Stack Developer",
         company: "Way2B1",
         technologies: ["React","Firebase","Sass","Figma"],
         image: "https://images.unsplash.com/photo-1510605395823-530474d7490f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1568&q=80",
+        secondaryImages: ["https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"],
         dark: false,
         gradient: "linear-gradient(-45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
         category: "Web Development",
+        addMask: true,
         liveLink: "https://www.way2b1.com/",
         description: {
             Background: "Way2B1 makes software to simplify wealth management and streamline approval for investments. They currently offer a suite of user-friendly products to help do this. Their website, however, was not up to their standards.",
@@ -70,11 +95,12 @@
         technologies: ["C++"],
         image: "https://www.cbronline.com/wp-content/uploads/2016/06/what-is-cache-memory.jpg",
         dark: false,
+        addMask: true,
         gradient: "linear-gradient(49deg, rgba(75,130,98,1) 20%, rgba(106,116,108.1) 58%, rgba(75,130,98,1) 93%)",
         category: "Academia",
         githubLink: "https://github.com/fordneild/cache-simulator",
         description: {
-            Background: "This was my final project for my Computer System Fundamentals class. Using C++ we implemented different versions of a cache and observed thier preformance against various datasets.",
+            Background: "This was my final project for my Computer System Fundamentals class. Using C++ we implemented different versions of a cache and observed thier preformance against various datasets. See the PDF on my github for the full assignment breakdown.",
             // What_I_Did: {
             //     bullet1: "I tested small, medium and large neural networks to determine the optimal size.",
             //     bullet2: "The medium performed the best and achieved 85% accuracy.",
@@ -84,17 +110,27 @@
         }
     },
     {
-        show: 0,
+        show: 1,
         title: "Assembler and Disassembler",
         year: "2019",
         role: "Student",
         company: "Johns Hopkins University",
         technologies: ["C","MIPS"],
         image: "https://www.discovercoding.ca/wp-content/uploads/2018/01/mips_assembly.jpg",
-        imageLeft: "-25px",
         dark: false,
+        addMask: true,
         gradient: "linear-gradient(122deg, rgba(191,191,191,1) 58%, rgba(36,49,143,1) 70%, rgba(179,39,35,1) 81%, rgba(191,191,191,1) 98%)",
-        category: "Academia"
+        category: "Academia",
+        githubLink: "https://github.com/fordneild/SCRAM-assembler-and-simulator",
+        description: {
+            Background: "This was my second project for my Computer System Fundamentals class. A MIPS set of command instructions are parsed and translated into binary data and then simulated. See the PDF on my github for a full assingment breakdown.",
+            // What_I_Did: {
+            //     bullet1: "I tested small, medium and large neural networks to determine the optimal size.",
+            //     bullet2: "The medium performed the best and achieved 85% accuracy.",
+            //     bullet3: "I created two variations of the medium network to try and reduce overfitting.",
+            //     bullet4: "By implementing a drop-out layer, which randomly resets the neuron's weights, I was able to achieve a final accuracy of 87%."
+            // }
+        }
 
     },
     
