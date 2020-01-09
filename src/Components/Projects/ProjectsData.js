@@ -1,6 +1,6 @@
  const projectsData = [
     {
-        show: 1,
+        show: 0,
         title: "Le Chiffre",
         year: "2019",
         company: "Personal Project",

@@ -7,9 +7,10 @@ class Project extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            mobileTouch: null
+            mobileTouch: null,
+            // backgroundImage: this.props.data.image,
+            // backgroundImageNum: 0
         }
-
     }
 
     toggleMobileTouch = (boolean) => {
@@ -17,21 +18,34 @@ class Project extends React.Component {
             mobileTouch: boolean
         })
     }
+
+    selectRandomBackgroundImage = () => {
+        if(this.props.data.secondaryImages){
+            const options = this.props.data.secondaryImages
+            options.push(this.props.data.image)
+            const imageNum = (this.state.backgroundImageNum+1) % options.length
+            console.log(options)
+            console.log(imageNum)
+            console.log(options[imageNum])
+            this.setState({
+                backgroundImage: options[imageNum],
+                backgroundImageNum: imageNum
+            })
+        }
+    }
     
 
     render(){
         const {state, styles, props} = this;
-        const {learnMore, mobileTouch} = state;
+        const {backgroundImage, learnMore, mobileTouch} = state;
         const {data, openModal} = props
         const {image, title, role, year, company ,technologies, dark, gradient, imageTop, imageLeft, description, addMask} = data;
-        //const {active} = state;
         return(
             <div 
                 className={`project ${dark? "dark" : ""} ${mobileTouch? "hover-effects" : ""}`}
-                // onMouseEnter={this.handleMouseEnter}
-                // onMouseLeave={this.handleMouseLeave}
                 onTouchStart = {() => this.toggleMobileTouch(true)}
                 onTouchEnd = {() => this.toggleMobileTouch(false)}
+                //onMouseLeave = {() => this.selectRandomBackgroundImage()}
                 style={{backgroundImage: 
                         `${(!dark && addMask)? "linear-gradient(0deg, rgba(0,0,0,0.4) 30%, rgba(255,255,255,0) 60%),": ""}
                         url(${image})`,
