@@ -1,6 +1,12 @@
  const way2b1ShowcaseData = {
     image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80"
  }
+ const webDevelopment = "Web Development"
+ const academia = "Academia"
+ const ML = "Machine Learning"
+ const categories = [webDevelopment,ML,academia]
+
+
  const projectsData = [
     {
         show: 0,
@@ -11,7 +17,7 @@
         image: "https://images.unsplash.com/photo-1511193311914-0346f16efe90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80",
         dark: false,
         gradient: "linear-gradient(0deg, rgba(127,154,153,1) 0%, rgba(13,64,63,1) 100%)",
-        category: "Web Development",
+        category: webDevelopment,
         addMask: true,
         liveLink: "https://www.way2b1.com/",
         description: {
@@ -38,7 +44,7 @@
         dark: false,
         gradient: "linear-gradient(150deg, rgba(255,136,119,1) 1%, rgba(124,124,149,1) 45%, rgba(125,99,91,1) 100%)",
         // gradient: "linear-gradient(-45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
-        category: "Web Development",
+        category: webDevelopment,
         addMask: true,
         liveLink: "https://www.way2b1.com/",
         description: {
@@ -64,7 +70,7 @@
         //imageTop: "-20px",
         dark: true,
         gradient: "linear-gradient(135deg, rgba(54,191,255,1) 33%, rgba(246,225,105,1) 65%, rgba(255,255,255,1) 90%)",
-        category: "Web Development",
+        category: webDevelopment,
         liveLink: "https://foragerone.com/",
         description: {
             Background: "I worked part-time at a start-up on campus named ForagerOne for 5 months. ForgerOne helps undergraduate students find and apply to research positions. Near the conclusion of my time there, they received a contract from Johns Hopkins University. I left to focus on my studies and learn React in preparation for my summer internship at Way2B1.",
@@ -88,7 +94,7 @@
         imageTop: "-268px",
         dark: false,
         gradient: "linear-gradient(225deg, rgba(82,96,98,1) 26%, rgba(155,136,129,1) 70%, rgba(188,139,101,1) 89%)",
-        category: "Web Development"
+        category: webDevelopment
 
     },
     {
@@ -102,7 +108,7 @@
         dark: false,
         addMask: true,
         gradient: "linear-gradient(49deg, rgba(75,130,98,1) 20%, rgba(106,116,108.1) 58%, rgba(75,130,98,1) 93%)",
-        category: "Academia",
+        category: academia,
         githubLink: "https://github.com/fordneild/cache-simulator",
         description: {
             Background: "This was my final project for my Computer System Fundamentals class. Using C++ we implemented different versions of a cache and observed thier preformance against various datasets. See the PDF on my github for the full assignment breakdown.",
@@ -125,7 +131,7 @@
         dark: false,
         addMask: true,
         gradient: "linear-gradient(122deg, rgba(191,191,191,1) 58%, rgba(36,49,143,1) 70%, rgba(179,39,35,1) 81%, rgba(191,191,191,1) 98%)",
-        category: "Academia",
+        category: academia,
         githubLink: "https://github.com/fordneild/SCRAM-assembler-and-simulator",
         description: {
             Background: "This was my second project for my Computer System Fundamentals class. A MIPS set of command instructions are parsed and translated into binary data and then simulated. See the PDF on my github for a full assingment breakdown.",
@@ -151,7 +157,7 @@
         dark: true,
         gradient: "linear-gradient(-90deg, rgba(239,91,109,1) 0%, rgba(78,175,124,1) 100%)",
         githubLink:"https://github.com/fordneild/binary-classification-movies-review",
-        category: "Machine Learning",
+        category: ML,
         description: {
             Background: "This was my third and most recent project using TensorFlow, a python machine learning library. The models were tasked with determining if a movie review was positive or negative. The models were trained with a dataset of 60,000 reviews for 20 epochs.",
             What_I_Did: {
@@ -174,7 +180,7 @@
         dark: true,
         gradient: "linear-gradient(326deg, rgba(164,164,152,1) 20%, rgba(255,166,165,1) 49%, rgba(255,255,255,1) 78%)",
         githubLink:"https://github.com/fordneild/median-price-prediction",
-        category: "Machine Learning",
+        category: ML,
         description: {
             Background: "This was my second project using TensorFlow, a python machine learning library. The goal was to predict the cost of a house in Boston based off ten features",
             // What_I_Did: {
@@ -196,7 +202,7 @@
         dark: true,
         gradient: "linear-gradient(153deg, rgba(255,255,255,1) 52%, rgba(255,0,0,1) 60%, rgba(0,0,255,1) 68%, rgba(255,255,255,1) 100%)",
         githubLink:"https://github.com/fordneild/clothes-classification",
-        category: "Machine Learning",
+        category: ML,
         description: {
             Background: "This was my first project using TensorFlow, a python machine learning library. The models were tasked with categorizing images of clothing into 10 categories. The model achieved 91% accuracy. This is a classic example of image classification with nueral networks",
             // What_I_Did: {
@@ -219,7 +225,7 @@
         image: require("../../assets/projectPhotos/to_pledge_allegiance_header_modified.jpg"),
         dark: true,
         gradient: "linear-gradient(124deg, rgba(255,255,255,1) 27%, rgba(206,187,84,1) 71%, rgba(153,182,187,1) 87%, rgba(246,136,65,1) 97%)",
-        category: "Web Development",
+        category: webDevelopment,
         liveLink: "https://fordneild.github.io/pbs.html",
         githubLink: "https://github.com/fordneild/to-pledge-allegience",
         description: {
@@ -235,7 +241,6 @@
     {
         show: 1,
         title: "Forevermark Diamonds",
-        showcase: true,
         year: "2018",
         role: "Front-End Developer",
         company: "Forevermark x the Atlantic",
@@ -244,7 +249,7 @@
         imageLeft: "-37px",
         dark: false,
         gradient: "linear-gradient(52deg, rgba(216,175,183,1) 11%, rgba(216,175,183,1) 61%, rgba(243,232,232,1) 76%)",
-        category: "Web Development",
+        category: webDevelopment,
         liveLink: "https://fordneild.github.io/forevermark.html",
         githubLink: "https://github.com/fordneild/forevermark",
         description: {
@@ -266,7 +271,7 @@
 
         dark: true,
         gradient: "linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(7,255,255,1) 39%, rgba(170,238,204,1) 51%, rgba(170,238,204,1) 69%, rgba(168,168,255,1) 73%, rgba(156,255,156,1) 77%)",
-        category: "Academia"
+        category: academia
     },
     {
         show: 0,
@@ -279,7 +284,7 @@
         imageLeft: "-190px",
         dark: true,
         gradient: "linear-gradient(170deg, rgba(255,255,255,1) 19%, rgba(255,216,110,1) 36%, rgba(109,207,158,1) 62%, rgba(255,255,255,1) 86%)",
-        category: "Academia"
+        category: academia
     },
     {
         show: 0,
@@ -291,7 +296,7 @@
         image: require("../../assets/projectPhotos/hashTree4.jpg"),
         dark: false,
         gradient: "linear-gradient(0deg, rgba(239,226,184,1) 12%, rgba(29,206,255,1) 27%, rgba(151,198,76,1) 53%, rgba(97,174,255,1) 99%)",
-        category: "Academia"
+        category: academia
 
     },
     {
@@ -304,8 +309,9 @@
         image: require("../../assets/projectPhotos/skiplist.jpg"),
         dark: true,
         gradient: "linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(1,237,136,1) 94%, rgba(0,250,247,1) 100%)",
-        category: "Academia"
+        category: academia
     },
  ]
 
  export default projectsData;
+ export {categories}

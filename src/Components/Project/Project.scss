@@ -1,5 +1,16 @@
 @import '../../variables';
 
+.projects--container{
+    &.showcase{
+        .project{
+            &.showcase{
+                width: 90%;
+                margin: 15px auto;
+            }
+        }
+    }
+}
+
 .project{
     width: 570px;
     height: 400px;
@@ -13,10 +24,6 @@
     color: white;
     background-color: black;
 
-    &.showcase{
-        width: 90%;
-        margin: 15px auto;
-    }
     &.dark{
         color: $primary-dark;
         background-color: white;

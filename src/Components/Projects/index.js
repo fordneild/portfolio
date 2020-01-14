@@ -3,6 +3,7 @@ import "./Projects.scss";
 import Project from "../Project";
 import LearnMore from "../LeanMore/";
 import data from "./ProjectsData";
+import {categories} from "./ProjectsData"
 import {
   disableBodyScroll,
   enableBodyScroll,
@@ -121,17 +122,11 @@ class Projects extends React.Component {
   }
 
   getCategories() {
-    let categories = [
-      ...new Set(
-        data.map(cur => {
-          return cur.category;
-        })
-      )
-    ];
-    categories.sort();
-    categories.splice(0, 0, this.showcase);
-    return categories;
+    const newCatgories = categories.slice(0)
+    newCatgories.splice(0, 0, this.showcase)
+    return newCatgories
   }
+
 
   openModal = learnMoreData => {
     this.setState({ learnMoreData: learnMoreData });
@@ -149,7 +144,7 @@ class Projects extends React.Component {
     });
   };
   render() {
-    const { state, props } = this;
+    const { state, props,showcase } = this;
     const { activeFilter, learnMoreData } = state;
 
     return (
@@ -159,12 +154,11 @@ class Projects extends React.Component {
         offset={{ top: 50 }}
       >
         <div
-          className={`projects--container`}
+          className={`projects--container ${activeFilter === showcase? "showcase": ""}`}
 
           style={this.state.backgroundStyles}
           ref={this.containerRef}
         >
-          {/* <img className="projects--background" src={'https://images.unsplash.com/photo-1539717037182-c782ec2b4f28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1647&q=80'}/> */}
           <a id="projects" />
           <h1>Projects</h1>
           <ul className="menu">
@@ -172,7 +166,7 @@ class Projects extends React.Component {
               return (
                 <li
                   className={`${activeFilter === filter ? "active" : ""} ${
-                    filter === this.showcase ? "showcase" : ""
+                    filter === showcase ? "showcase" : ""
                   }`}
                   key={index}
                   onClick={() => this.handleFilterClick(filter)}
@@ -200,6 +194,7 @@ class Projects extends React.Component {
                   openModal={this.openModal}
                   key={index}
                   data={projectData}
+                  inShowcase={activeFilter === showcase}
                 />
               ))}
           </div>

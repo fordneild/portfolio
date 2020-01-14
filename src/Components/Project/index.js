@@ -37,15 +37,14 @@ class Project extends React.Component {
 
     getBackgroundImage = () => {
         const {props, darkOverlay} = this;
-        const {data} = props
+        const {data, inShowcase} = props
         const {image,dark,imageTop, imageLeft, addMask, showcase} = data;
-        // if(showcase)
-        if(showcase){
+        if(showcase && inShowcase){
             return ({backgroundImage: 
                 `${(!dark && addMask)? darkOverlay: ""}
                 url(${showcase.image || image})`,
-                // backgroundPositionY: imageTop,
-                // backgroundPositionX: imageLeft
+                // backgroundPositionY: showcase.imageTop || "unset",
+                // backgroundPositionX: showcase.imageLeft || "unset"
             })
         }else{
             return ({backgroundImage: 
