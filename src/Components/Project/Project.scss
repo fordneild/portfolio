@@ -12,6 +12,11 @@
     overflow: hidden;
     color: white;
     background-color: black;
+
+    &.showcase{
+        width: 90%;
+        margin: 15px auto;
+    }
     &.dark{
         color: $primary-dark;
         background-color: white;
@@ -124,7 +129,6 @@
         }
 
     }
-
 }
 
 @media screen and (max-width: 600px) {

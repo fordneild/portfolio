@@ -21,8 +21,12 @@ class Landing extends React.Component {
   BLUR_CONSTANT = 42.5;
   //not sure what hgiher means but ill find out
   REFLECTION_CONSTANT = 1.4;
+  height = null;
+
   componentDidMount() {
     this.updateReflection();
+    this.height = window.innerHeight;
+    // document.documentElement.style.setProperty("--window-innerHeight", window.innerHeight);
     //this.onChange(this.state.isVisible)
   }
 
@@ -61,26 +65,51 @@ class Landing extends React.Component {
     this.props.toggleLandingVisible(isVisible);
   };
 
+  getHeightDependentStyle = (property, percent) => {
+    return this.height ? { [property]: this.height * (percent / 100) } : {};
+  };
+
   render() {
     const { isVisible } = this.state;
+    const h4Styles = this.getHeightDependentStyle("fontSize", 4);
+    const h1Styles = this.getHeightDependentStyle("fontSize", 7);
     return (
-      <VisibilitySensor partialVisibility={true} onChange={this.onChange} offset={{top:50}}>
-        <section className="landing">
+      //DO I EVEN NEED THIS ANY MORE????
+      <VisibilitySensor
+        partialVisibility={true}
+        onChange={this.onChange}
+        offset={{ top: 50 }}
+      >
+        <section
+          style={this.getHeightDependentStyle("height", 110)}
+          className="landing"
+          onTouchMove={e => e.preventDefault()}
+        >
           <a id="#home"></a>
-          <img className={isVisible ? "fixed" : null} src={LandingImage} />
-          <div className={`landing__intro ${!isVisible ? "gone" : ""}`}>
-            <div className="text">
-              <h4>Meet Me</h4>
-              <h1>Ford Neild</h1>
-              <h4>Full Stack Developer</h4>
+          <img
+            style={this.getHeightDependentStyle("height", 110)}
+            // className={isVisible ? "fixed" : null}
+            className="fixed"
+            src={LandingImage}
+          />
+          <div
+            style={this.getHeightDependentStyle("marginTop", 24)}
+            className={`landing__intro ${!isVisible ? "" : ""}`}
+          >
+            <div
+            style={this.getHeightDependentStyle("marginTop", 20)} 
+            className="text">
+              <h4 style={h4Styles}>Meet Me</h4>
+              <h1 style={h1Styles}>Ford Neild</h1>
+              <h4 style={h4Styles}>Full Stack Developer</h4>
             </div>
             <div
               className="text-relflection"
               style={this.state.reflectionStyles}
             >
-              <h4>Meet Me</h4>
-              <h1>Ford Neild</h1>
-              <h4>Full Stack Developer</h4>
+              <h4 style={h4Styles}>Meet Me</h4>
+              <h1 style={h1Styles}>Ford Neild</h1>
+              <h4 style={h4Styles}>Full Stack Developer</h4>
             </div>
           </div>
         </section>

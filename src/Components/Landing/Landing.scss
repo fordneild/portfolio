@@ -3,7 +3,6 @@
     position: relative;
     font-family: 'Julius Sans One', sans-serif;
     color: white;
-
     display: flex;
     justify-content: center;
     background-color: $primary;
@@ -14,22 +13,20 @@
     >img{
         height: 100%;
     }
-  }
+  
   .fixed{
     position: fixed;
+    left: 50%;
+    transform: translateX(-50%)
   }
   .landing__intro {
-    // position: absolute;
-    // top: 32vh;
-    // left: 50%;
-    // transform: translateX(-50%);
     margin-top: 32vh;
-    // min-width: 375px;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: default;
-    z-index: 0;
+    z-index: 0;  
+    pointer-events: none;
     h1{
         font-size: 7.25vh;
         text-align: center;
@@ -51,6 +48,7 @@
         opacity: 0.3;
         //idk if we should slow it at all
         transition: transform 10ms linear;
+        pointer-events: none;
     }
     &.gone{
       display: none;
@@ -60,5 +58,28 @@
   .landing::-webkit-scrollbar {
     display: none;
   }
+}
+
+@media screen and (max-width: 800px) {
+  // .landing {
+  //   height: var(--window-innerHeight);
+  //   >img{
+  //       height: var(--window-innerHeight);
+  //   }
+  //   .landing__intro {
+  //     margin-top: calc(var(--window-innerHeight)*.32);
+  //     h1{
+  //         font-size: calc(var(--window-innerHeight)*.1);
+  //     }
+  //     h4{
+  //       font-size: calc(var(--window-innerHeight)*.05);
+  //     }
+  //     .text {
+  //         margin-bottom: calc(var(--window-innerHeight)*.20);
+  //       }
+  //   }
+  // }
+
+}
 
   

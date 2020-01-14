@@ -1,3 +1,6 @@
+ const way2b1ShowcaseData = {
+    image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80"
+ }
  const projectsData = [
     {
         show: 0,
@@ -24,15 +27,17 @@
     },
     {
         show: 1,
+        showcase: way2b1ShowcaseData,
         title: "Way2B1 Website and CMS",
         year: "2019",
         role: "Full-Stack Developer",
         company: "Way2B1",
         technologies: ["React","Firebase","Sass","Figma"],
-        image: "https://images.unsplash.com/photo-1510605395823-530474d7490f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1568&q=80",
+        image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80",
         secondaryImages: ["https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"],
         dark: false,
-        gradient: "linear-gradient(-45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        gradient: "linear-gradient(150deg, rgba(255,136,119,1) 1%, rgba(124,124,149,1) 45%, rgba(125,99,91,1) 100%)",
+        // gradient: "linear-gradient(-45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
         category: "Web Development",
         addMask: true,
         liveLink: "https://www.way2b1.com/",
@@ -137,6 +142,7 @@
     {
         show: 1,
         title: "Binary Text Classification",
+        showcase: true,
         year: "2018",
         company: "Personal Project",
         technologies: ["TensorFLow","NumPym","Pandas","Python"],
@@ -205,6 +211,7 @@
     {
         show: 1,
         title: "To Pledge Allegience",
+        showcase: true,
         year: "2018",
         role: "Front-End Developer",
         company: "PBS x the Atlantic",
@@ -228,6 +235,7 @@
     {
         show: 1,
         title: "Forevermark Diamonds",
+        showcase: true,
         year: "2018",
         role: "Front-End Developer",
         company: "Forevermark x the Atlantic",
