@@ -1,5 +1,16 @@
 @import '../../variables';
 
+.projects--container{
+    &.showcase{
+        .project{
+            &.showcase{
+                width: 90%;
+                margin: 15px auto;
+            }
+        }
+    }
+}
+
 .project{
     width: 570px;
     height: 400px;
@@ -12,6 +23,7 @@
     overflow: hidden;
     color: white;
     background-color: black;
+
     &.dark{
         color: $primary-dark;
         background-color: white;
@@ -124,7 +136,6 @@
         }
 
     }
-
 }
 
 @media screen and (max-width: 600px) {

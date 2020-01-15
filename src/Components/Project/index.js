@@ -33,25 +33,45 @@ class Project extends React.Component {
             })
         }
     }
+    darkOverlay = "linear-gradient(0deg, rgba(0,0,0,0.4) 30%, rgba(255,255,255,0) 60%),"
+
+    getBackgroundImage = () => {
+        const {props, darkOverlay} = this;
+        const {data, inShowcase} = props
+        const {image,dark,imageTop, imageLeft, addMask, showcase} = data;
+        if(showcase && inShowcase){
+            return ({backgroundImage: 
+                `${(!dark && addMask)? darkOverlay: ""}
+                url(${showcase.image || image})`,
+                // backgroundPositionY: showcase.imageTop || "unset",
+                // backgroundPositionX: showcase.imageLeft || "unset"
+            })
+        }else{
+            return ({backgroundImage: 
+                `${(!dark && addMask)? darkOverlay: ""}
+                url(${image})`,
+                backgroundPositionY: imageTop,
+                backgroundPositionX: imageLeft
+            })
+        }
+    }
     
 
     render(){
-        const {state, styles, props} = this;
-        const {backgroundImage, learnMore, mobileTouch} = state;
+        const {state,props} = this;
+        const {mobileTouch} = state;
         const {data, openModal} = props
-        const {image, title, role, year, company ,technologies, dark, gradient, imageTop, imageLeft, description, addMask} = data;
+        const {showcase = false, title, role, year, company ,technologies, dark, gradient} = data;
         return(
             <div 
-                className={`project ${dark? "dark" : ""} ${mobileTouch? "hover-effects" : ""}`}
+                //with showcase thingy
+                className={`project ${dark? "dark" : ""} ${showcase? "showcase":""} ${mobileTouch? "hover-effects" : ""}`}
+                //without showcase thingy
+                // className={`project ${dark? "dark" : ""} ${mobileTouch? "hover-effects" : ""}`}
                 onTouchStart = {() => this.toggleMobileTouch(true)}
                 onTouchEnd = {() => this.toggleMobileTouch(false)}
                 //onMouseLeave = {() => this.selectRandomBackgroundImage()}
-                style={{backgroundImage: 
-                        `${(!dark && addMask)? "linear-gradient(0deg, rgba(0,0,0,0.4) 30%, rgba(255,255,255,0) 60%),": ""}
-                        url(${image})`,
-                        backgroundPositionY: imageTop,
-                        backgroundPositionX: imageLeft
-                    }}
+                style={this.getBackgroundImage()}
                 > 
                 <div className="gradient"
                 style={{backgroundImage: gradient}}

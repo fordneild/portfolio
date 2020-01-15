@@ -4,7 +4,7 @@ import Resume from '../../assets/docs/Resume.pdf'
 
 class Navbar extends React.Component {
     constructor(props){
-        super(props)
+        super(props) 
         this.state = {
             isVisible: true
         }
