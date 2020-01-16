@@ -9,32 +9,69 @@
         background-color: $primary-light;
         width: 100%;
         height: 100%;
-        transform: skewX(-10deg) translateX(-5%);
+        transform: skewX(50deg) translateX(20%);
         display: flex;
         justify-content: center;
     }
     .reverse-sheered{
-        transform: skewX(10deg) translateX(5%);
-        width: 70%;
+        transform: skewX(-50deg) translateX(-20%);
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         h1{
             font-size: 40px;
-            border-bottom: 3px solid $primary-dark;
-            border-top: 3px solid $primary-dark;
             text-transform: uppercase;
             height: min-content;
-            margin: 0;
-            margin-top: 60px;
+            margin: 40px auto 30px;
             padding: 0;
             font-family: $header-font;
         }
-        p{
-            font-family: $body-font;
-            font-size: 16px;
-            margin-bottom: 50px;
+
+        .about__content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%;
+
+            .about__content__column{
+                width: 47%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            p{
+                font-family: $body-font;
+                font-size: 18px;
+                max-width: 500px;
+                display: block;
+                min-width: 300px;
+                line-height: 1.2;
+            }
+            .profile-picture--container{
+                min-width: 300px;
+                max-width: 300px;
+                min-height: 300px;
+                max-height: 300px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 5px solid $primary;
+                margin: 30px;
+                
+                img{
+                    width: 110%;
+                    height: auto;
+                    position: absolute;
+                    top: -40%;
+                }
+            }
+
+            
         }
+        
         .test{
             height: 200px;
             width: 200px;
@@ -46,4 +83,22 @@
             margin-bottom: 100px;
         }
     }
+}
+
+@media screen and (max-width: 950px) {
+    .about--container{
+        background-color: $primary-light;
+        .about__content{
+            flex-direction: column;
+            width: 100%;
+            .about__content__column{
+                width: 100% !important;
+    
+                &:first-child{
+                    //flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+    
 }
