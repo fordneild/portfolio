@@ -17,7 +17,7 @@ const About = () => {
                 full-stack features from start to finish. I love every stage in the process, from brainstorming to unit testing.
               </p>
               <div className="profile-picture--container">            
-              <img src={ProfilePhoto} alt=""/>
+              <img src={ProfilePhoto} draggable="false"  alt="Ford Neild"/>
               </div>
             </div>
             <div className="about__content__column">

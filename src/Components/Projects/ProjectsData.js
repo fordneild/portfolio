@@ -1,6 +1,16 @@
  const way2b1ShowcaseData = {
     image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80"
  }
+
+ const binaryTextClassificationShowcaseData = {
+     backgroundPositionY: "-315px",
+     backgroundSize: "125%"
+ }
+
+ const pbsShowcaseData = {
+     backgroundSize: "80%",
+     backgroundColor: "#EBEBE8"
+ }
  const webDevelopment = "Web Development"
  const academia = "Academia"
  const ML = "Machine Learning"
@@ -8,6 +18,33 @@
 
 
  const projectsData = [
+    {
+        show: 0,
+        // showcase: way2b1ShowcaseData,
+        title: "Product Developer on Source Team",
+        year: "2019",
+        role: "Full-Stack Developer",
+        company: "Way2B1",
+        technologies: ["React","MobX","Postgres", "Sass"],
+        image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80",
+        secondaryImages: ["https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"],
+        dark: false,
+        gradient: "linear-gradient(150deg, rgba(255,136,119,1) 1%, rgba(124,124,149,1) 45%, rgba(125,99,91,1) 100%)",
+        // gradient: "linear-gradient(-45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        category: webDevelopment,
+        addMask: true,
+        liveLink: "https://www.way2b1.com/",
+        description: {
+            Background: "Way2B1 makes software to simplify wealth management and streamline approval for investments. They currently offer a suite of user-friendly products to help do this. Their website, however, was not up to their standards.",
+            What_I_Did: {
+                bullet1: "I built a clear and sleek React-based website to serve the first point of contact with potential clients.",
+                bullet2: "I designed and developed a content management system with Firebase to allow higher-ups to easily change the site’s images and copy without needing to touch the codebase.",
+                bullet3: "There were 5 views in total each with custom-made responsive components such as carousels, accordions, and modals.",
+                bullet4: "I created two React forms with unobtrusive user validation.",
+                bullet5: "I integrated the careers page with the Google Hire API to allow for dynamic job posting and applications."
+            }
+        }
+    },
     {
         show: 0,
         title: "Le Chiffre",
@@ -148,7 +185,7 @@
     {
         show: 1,
         title: "Binary Text Classification",
-        showcase: true,
+        showcase: binaryTextClassificationShowcaseData,
         year: "2018",
         company: "Personal Project",
         technologies: ["TensorFLow","NumPym","Pandas","Python"],
@@ -217,7 +254,7 @@
     {
         show: 1,
         title: "To Pledge Allegience",
-        showcase: true,
+        showcase: pbsShowcaseData,
         year: "2018",
         role: "Front-End Developer",
         company: "PBS x the Atlantic",
