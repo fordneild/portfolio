@@ -19,6 +19,10 @@ class Project extends React.Component {
         })
     }
 
+    shouldShowShowcaseStyles = () => {
+        return (this.props.data.showcase && this.props.inShowcase && window.innerWidth>1200)
+    }
+
     selectRandomBackgroundImage = () => {
         if(this.props.data.secondaryImages){
             const options = this.props.data.secondaryImages
@@ -37,10 +41,9 @@ class Project extends React.Component {
 
     getBackgroundImage = () => {
         const {props, darkOverlay} = this;
-        const {data, inShowcase} = props
+        const {data} = props
         const {image,dark,imageTop, imageLeft, addMask, showcase, backgroundColor = "white"} = data;
-        //disable showcase at 1200px
-        if(showcase && inShowcase && window.innerWidth>1200){
+        if(this.shouldShowShowcaseStyles()){
             return ({backgroundImage: 
                 `${(!dark && addMask)? darkOverlay: ""}
                 url(${showcase.image || image})`,
@@ -82,20 +85,25 @@ class Project extends React.Component {
                 >
                 </div>
                 <div className="rising-content">
-                    <h2 className = "title">{title}</h2>
-                    <h4 className="company">{company}</h4>
-                    <h3 onClick={() => openModal(data)} className={`learn-more-button ${dark? "dark" : ""}`}>Learn More</h3>
-                    <div className="about">
-                        <p>Year: <span>{year}</span></p>
-                        {role && <p>Role: <span>{role}</span></p>}
+                    <div className="rising-content--main">
+                        <h2 className = "title">{title}</h2>
+                        <h4 className="company">{company}</h4>
+                        <h3 onClick={() => openModal(data)} className={`learn-more-button ${dark? "dark" : ""}`}>Learn More</h3>
+                        <div className="about">
+                            <p>Year: <span>{year}</span></p>
+                            {role && <p>Role: <span>{role}</span></p>}
+                        </div>
+                        <ul className={`technologies ${dark? "dark" : ""}`}>
+                            {technologies.map((technology, index)=> {
+                                return(
+                                    <li key={index}>{technology}</li>
+                                )
+                            })}
+                        </ul>
                     </div>
-                    <ul className={`technologies ${dark? "dark" : ""}`}>
-                        {technologies.map((technology, index)=> {
-                            return(
-                                <li key={index}>{technology}</li>
-                            )
-                        })}
-                    </ul>
+                    <div className="rising-content--showcase">
+
+                    </div>
                 </div>
                 {/* <LearnMore visible={learnMore} toggleModal={this.toggleModal}{...props}/> */}
             </div>            

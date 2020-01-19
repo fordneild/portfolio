@@ -4,7 +4,8 @@
 
  const binaryTextClassificationShowcaseData = {
      backgroundPositionY: "-315px",
-     backgroundSize: "125%"
+     backgroundSize: "125%",
+     projectImage: require("../../assets/projectPhotos/Way2B1SolutionsLanding.png"),
  }
 
  const pbsShowcaseData = {
