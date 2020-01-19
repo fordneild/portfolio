@@ -39,8 +39,8 @@ class Project extends React.Component {
         const {props, darkOverlay} = this;
         const {data, inShowcase} = props
         const {image,dark,imageTop, imageLeft, addMask, showcase, backgroundColor = "white"} = data;
-
-        if(showcase && inShowcase){
+        //disable showcase at 1200px
+        if(showcase && inShowcase && window.innerWidth>1200){
             return ({backgroundImage: 
                 `${(!dark && addMask)? darkOverlay: ""}
                 url(${showcase.image || image})`,

@@ -1,11 +1,13 @@
 @import '../../variables';
 
-.projects--container{
-    &.showcase{
-        .project{
-            &.showcase{
-                width: 1155px;
-                margin: 15px auto;
+@media screen and (min-width: 1200px) {
+    .projects--container{
+        &.showcase{
+            .project{
+                &.showcase{
+                    width: 1155px;
+                    margin: 15px auto;
+                }
             }
         }
     }
@@ -140,7 +142,7 @@
 
 @media screen and (max-width: 600px) {
     .project{
-        width: 90vw;
+        width: 90vw !important;
         height: 63.15vw;
         .title{
             width: 90%;
