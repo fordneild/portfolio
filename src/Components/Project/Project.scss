@@ -8,9 +8,13 @@
                     .rising-content--showcase{
                         display: flex;
                         opacity: 0;
-                        transition: all 150ms ease-in-out;
+                        transition: opacity 150ms ease-in-out;
+                        // max-height: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
                         img{
-                            width: 610px;
+                            width: 500px;
                             height: auto;
                         }
                     }
@@ -80,7 +84,7 @@
         }
         .title{
             margin: 0;
-            font-size: 30px;
+            font-size: 34px;
             font-family: $header-font;
             font-weight: bolder;
             text-transform: uppercase;
@@ -90,7 +94,7 @@
         .company{
             margin: 0;
             font-family: $body-font;
-            font-size: 18px;
+            font-size: 22px;
             font-weight: lighter;
             margin-bottom: 70px;
         }
@@ -98,14 +102,14 @@
         .learn-more-button{
             position: relative;
             font-family: $body-font;
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
             width: fit-content;
-            margin-bottom: 120px;
+            margin-bottom: 90px;
             cursor: pointer;
             &::after{
                 content: ' ';
-                width: 17px;
+                width: 19px;
                 height: 2px;
                 background-color: white;
                 position: absolute;
@@ -129,7 +133,7 @@
         .about{
             display: flex;
             p{
-                font-size: 16px;
+                font-size: 20px;
                 margin: 0;
 
                 margin-right: 20px;
@@ -150,7 +154,7 @@
                 margin-right: 10px;
                 background-color: black;
                 color: white;
-                font-size: 12px;
+                font-size: 16px;
             }
             
         }

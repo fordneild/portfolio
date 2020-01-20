@@ -41,7 +41,7 @@ class Project extends React.Component {
     }
   };
   darkOverlay =
-    "linear-gradient(0deg, rgba(0,0,0,0.4) 30%, rgba(255,255,255,0) 60%),";
+    "linear-gradient(0deg, rgba(0,0,0,0.3) 30%, rgba(255,255,255,0) 60%),";
 
   getBackgroundImage = () => {
     const { props, darkOverlay } = this;

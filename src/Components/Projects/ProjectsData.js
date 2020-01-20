@@ -1,16 +1,22 @@
- const way2b1ShowcaseData = {
+const sourceShowcaseData = {
     image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80",
+    showcaseImage: require("../../assets/projectPhotos/Source_Home.png"),
+ }
+
+ const way2b1ShowcaseData = {
     showcaseImage: require("../../assets/projectPhotos/Way2B1SolutionsLanding.png"),
  }
 
  const binaryTextClassificationShowcaseData = {
      backgroundPositionY: "-315px",
      backgroundSize: "125%",
+     showcaseImage: require("../../assets/projectPhotos/NN_analysis2.jpg"),
  }
 
  const pbsShowcaseData = {
-     backgroundSize: "80%",
-     backgroundColor: "#EBEBE8"
+     backgroundSize: "75%",
+     backgroundColor: "#EBEBE8",
+     showcaseImage: require("../../assets/projectPhotos/pbs-landing.png"),
  }
  const webDevelopment = "Web Development"
  const academia = "Academia"
@@ -20,29 +26,24 @@
 
  const projectsData = [
     {
-        show: 0,
-        // showcase: way2b1ShowcaseData,
-        title: "Product Developer on Source Team",
-        year: "2019",
+        show: 1,
+        showcase: sourceShowcaseData,
+        title: "Source Product Team",
+        year: "2020",
         role: "Full-Stack Developer",
         company: "Way2B1",
         technologies: ["React","MobX","Postgres", "Sass"],
         image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80",
-        secondaryImages: ["https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"],
         dark: false,
         gradient: "linear-gradient(150deg, rgba(255,136,119,1) 1%, rgba(124,124,149,1) 45%, rgba(125,99,91,1) 100%)",
-        // gradient: "linear-gradient(-45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
         category: webDevelopment,
         addMask: true,
-        liveLink: "https://www.way2b1.com/",
         description: {
-            Background: "Way2B1 makes software to simplify wealth management and streamline approval for investments. They currently offer a suite of user-friendly products to help do this. Their website, however, was not up to their standards.",
+            Background: "Way2B1 is a B-series funded company creating collaborative software for wealth management. Over my month long winter break, I worked at the Way2B1 San Francisco office on thier flagship product, Source. I pushed 5 full-stack features to production for high priority banks and family offices. I gained experience working as part of an Agile team with 5 other developers using Jira.",
             What_I_Did: {
-                bullet1: "I built a clear and sleek React-based website to serve the first point of contact with potential clients.",
-                bullet2: "I designed and developed a content management system with Firebase to allow higher-ups to easily change the site’s images and copy without needing to touch the codebase.",
-                bullet3: "There were 5 views in total each with custom-made responsive components such as carousels, accordions, and modals.",
-                bullet4: "I created two React forms with unobtrusive user validation.",
-                bullet5: "I integrated the careers page with the Google Hire API to allow for dynamic job posting and applications."
+                bullet1: "Stored recent items visited as a JSON representation of a stack in a new user data table. On load, I cached it in local storage and patched the backend during low-stress periods to maintain performance.",
+                bullet2: "Built a typing indicator (Ford Neild is typing...) using web sockets for low latency multi-client communication",
+                bullet3: "Architected development standards for migrating towards mobile responsiveness. The modular wrapper component ensured only the visible components would be loaded, increasing the readability and preformance of the code."
             }
         }
     },
@@ -59,7 +60,7 @@
         addMask: true,
         liveLink: "https://www.way2b1.com/",
         description: {
-            Background: "Way2B1 makes software to simplify wealth management and streamline approval for investments. They currently offer a suite of user-friendly products to help do this. Their website, however, was not up to their standards.",
+            Background: "Way2B1 makes software to simplify wealth management. They currently offer a suite of user-friendly products to help do this. Their website, however, was not up to their standards. Over my summer internship entering junior year I wokred at Way2b1's chicago office where I was the sole developer of this new React based wesite to serve as the first point of contact with potential customers.",
             What_I_Did: {
                 bullet1: "I built a clear and sleek React-based website to serve the first point of contact with potential clients.",
                 bullet2: "I designed and developed a content management system with Firebase to allow higher-ups to easily change the site’s images and copy without needing to touch the codebase.",
@@ -77,11 +78,10 @@
         role: "Full-Stack Developer",
         company: "Way2B1",
         technologies: ["React","Firebase","Sass","Figma"],
-        image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80",
-        secondaryImages: ["https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"],
+        image: "https://www.ef.com/sitecore/__~/media/efcom/2018/ils/destinations/United-states/Chicago/Chicago-Stage-Destop.jpg",
+        // image: "https://acutrans.com/wp-content/uploads/2019/10/chicago_skyline-e1571623984482.jpg",
         dark: false,
-        gradient: "linear-gradient(150deg, rgba(255,136,119,1) 1%, rgba(124,124,149,1) 45%, rgba(125,99,91,1) 100%)",
-        // gradient: "linear-gradient(-45deg, rgba(142,152,161,1) 0%, rgba(30,48,67,1) 100%)",
+        gradient: "linear-gradient(342deg, rgba(135,171,181,1) 45%, rgba(232,191,116,1) 100%)",
         category: webDevelopment,
         addMask: true,
         liveLink: "https://www.way2b1.com/",
@@ -104,8 +104,6 @@
         company: "ForagerOne",
         technologies: ["AngularJS", "Bootstrap","Node.js","Express",],
         image: require("../../assets/projectPhotos/ForagerOneHome.jpg"),
-        //image: "https://fordneild.github.io/assets/fg1_favicon.png",
-        //imageTop: "-20px",
         dark: true,
         gradient: "linear-gradient(135deg, rgba(54,191,255,1) 33%, rgba(246,225,105,1) 65%, rgba(255,255,255,1) 90%)",
         category: webDevelopment,
