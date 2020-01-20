@@ -1,7 +1,11 @@
-.slider-container{
+.slider-window{
     width: 200px;
     background-color: black;
-    display: flex;
+    .slider-track{
+        border: 1px solid black;
+        transition: transform 500ms ease-in-out;
+        display: flex;    
+    }    
     .slide{
         min-width: 100%;
         height: 200px;
