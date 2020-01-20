@@ -1,0 +1,11 @@
+.slider-container{
+    width: 200px;
+    background-color: black;
+    display: flex;
+    .slide{
+        min-width: 100%;
+        height: 200px;
+        border: 1px solid green;
+        background-color: blue;
+    }
+}

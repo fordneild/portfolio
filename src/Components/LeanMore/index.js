@@ -2,6 +2,7 @@ import React from 'react'
 import './LearnMore.scss'
 import CloseButton from '../CloseButton'
 import Icon from '../Icon'
+import Slider from '../Slider/index'
 
 class LearnMore extends React.Component {
     modalRef = React.createRef()
@@ -64,6 +65,7 @@ class LearnMore extends React.Component {
                         <img src={image} alt={title} />
                     </div> */}
                     {this.renderDescription()}
+                    <Slider/>
                     <div onClick={this.handleClick} className="close">
                         <CloseButton dark = {dark}/>
                     </div>
