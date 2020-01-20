@@ -1,11 +1,11 @@
  const way2b1ShowcaseData = {
-    image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80"
+    image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80",
+    showcaseImage: require("../../assets/projectPhotos/Way2B1SolutionsLanding.png"),
  }
 
  const binaryTextClassificationShowcaseData = {
      backgroundPositionY: "-315px",
      backgroundSize: "125%",
-     projectImage: require("../../assets/projectPhotos/Way2B1SolutionsLanding.png"),
  }
 
  const pbsShowcaseData = {
