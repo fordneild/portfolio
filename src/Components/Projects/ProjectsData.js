@@ -43,7 +43,7 @@ const sourceShowcaseData = {
             What_I_Did: {
                 bullet1: "Stored recent items visited as a JSON representation of a stack in a new user data table. On load, I cached it in local storage and patched the backend during low-stress periods to maintain performance.",
                 bullet2: "Built a typing indicator (Ford Neild is typing...) using web sockets for low latency multi-client communication",
-                bullet3: "Architected development standards for migrating towards mobile responsiveness. The modular wrapper component ensured only the visible components would be loaded, increasing the readability and preformance of the code."
+                bullet3: "Architected development standards for migrating towards mobile responsiveness. The modular wrapper component ensured only the visible components would be loaded, abincreasing the readability and preformance of the code."
             }
         }
     },
