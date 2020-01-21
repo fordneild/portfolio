@@ -1,15 +1,25 @@
 .slider-window{
-    width: 200px;
-    background-color: black;
+    width: 100%;
+    
     .slider-track{
-        border: 1px solid black;
         transition: transform 500ms ease-in-out;
-        display: flex;    
+        display: flex;
     }    
-    .slide{
-        min-width: 100%;
-        height: 200px;
-        border: 1px solid green;
-        background-color: blue;
+    .slide-container{
+        cursor: pointer;
+        min-width: 70%;
+        max-width: 70%;
+        transform: scale(0.75);
+        transition: transform 200ms ease-in-out;
+        &.active{
+            transform: scale(1);
+            cursor: default;
+        }
+
+        &.ghost{
+            transform: scale(1);
+            cursor: default;
+            // background-color: rgba(255,0,0,0.6)
+        }
     }
 }

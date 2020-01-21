@@ -86,7 +86,7 @@ class Project extends React.Component {
       company,
       technologies,
       dark,
-      gradient
+      gradient,
     } = data;
     const {showcaseImage} = showcase;
     return (

@@ -37,6 +37,22 @@ const sourceShowcaseData = {
         dark: false,
         gradient: "linear-gradient(150deg, rgba(255,136,119,1) 1%, rgba(124,124,149,1) 45%, rgba(125,99,91,1) 100%)",
         category: webDevelopment,
+        slides:[
+            {
+                image: require("../../assets/projectPhotos/Source_Home.png"),
+                title: "Overview",
+                points: [
+                    "Stored recent items visited as a JSON representation of a stack in a new user data table. On load, I cached it in local storage and patched the backend during low-stress periods to maintain performance."
+                ]
+            },
+            {
+                image: require("../../assets/projectPhotos/Source_Home.png"),
+                title: "Overview",
+                points: [
+                    "Stored recent items visited as a JSON representation of a stack in a new user data table. On load, I cached it in local storage and patched the backend during low-stress periods to maintain performance."
+                ]
+            }
+        ],
         addMask: true,
         description: {
             Background: "Way2B1 is a B-series funded company creating collaborative software for wealth management. Over my month long winter break, I worked at the Way2B1 San Francisco office on thier flagship product, Source. I pushed 5 full-stack features to production for high priority banks and family offices. I gained experience working as part of an Agile team with 5 other developers using Jira.",

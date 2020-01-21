@@ -1,22 +1,19 @@
 @import '../../_variables.scss';
 .learn-more--overlay{
     position: fixed;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.85);
     // background-color: green;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
     z-index: 3;
     .learn-more{
-        margin-top: 80px;
-        background-color: $primary;
-        width: 80%;
-        max-width: 600px;
+        width: 100%;
         height: fit-content;
-        max-height: 600px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -24,29 +21,21 @@
         z-index: 4;
         color: $primary-light;
         overflow-y: scroll;
-        border-radius: 30px;
 
         h3{
             font-family: $header-font;
-            font-size: 30px;
+            font-size: 34px;
             margin: 10px 0px;
-            margin-top: 30px;
             max-width: 70%;
             text-align: center;
         }
-        .image--container{
-            width: 100%;
-            img{
-                display: block;
-                width: 100%;
-            }
-        }
+
+        
         .buttons{
             display: flex;
             justify-content: space-around;
             width: 200px;
             margin-bottom: 15px;
-            min-height: 50px;
             align-items: center;
         }
 
@@ -65,11 +54,6 @@
                 transform: scale(1.4)
             }
         }
-
-        &.dark{
-            color: $primary;
-            background-color: $primary-light;
-        }
         &::-webkit-scrollbar {
             width: 0px;  /* Remove scrollbar space */
             background: transparent;  /* Optional: just make scrollbar invisible */
@@ -82,6 +66,10 @@
             height: 100%;
             pointer-events: none;
             background: linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,0.4) 100%);
+        }
+        .learn-more-slider-container{
+            width: 100%;
+            margin: 15px 0px;
         }
     }
     .fill-parent{
