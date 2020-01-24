@@ -55,7 +55,7 @@ class LearnMore extends React.Component {
         <div className={`learn-more--overlay`}>
           <div
             ref={this.modalRef}
-            className={`learn-more ${dark ? "dark" : ""}`}
+            className={`learn-more old ${dark ? "dark" : ""}`}
           >
             <h3>{title}</h3>
             <div className="buttons">

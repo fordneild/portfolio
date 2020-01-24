@@ -13,7 +13,20 @@
     z-index: 3;
     .learn-more{
         &.old{
-            
+            margin-top: 80px;
+            background-color: $primary;
+            width: 80%;
+            max-width: 600px;
+            height: fit-content;
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 4;
+            color: $primary-light;
+            overflow-y: scroll;
+            border-radius: 30px;
         }
         width: 100%;
         height: fit-content;
