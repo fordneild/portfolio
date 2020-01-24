@@ -39,11 +39,11 @@ const sourceShowcaseData = {
         category: webDevelopment,
         addMask: true,
         description: {
-            Background: "Way2B1 is a B-series funded company creating collaborative software for wealth management. Over my month long winter break, I worked at the Way2B1 San Francisco office on thier flagship product, Source. I pushed 5 full-stack features to production for high priority banks and family offices. I gained experience working as part of an Agile team with 5 other developers using Jira.",
+            Background: "Way2B1 is a B-series funded company creating collaborative software for wealth management. Over my month long winter break, I worked at the Way2B1 San Francisco office on their flagship product, Source. I pushed 5 full-stack features to production for high priority banks and family offices. I gained experience working as part of an Agile team with 5 other developers using Jira.",
             What_I_Did: {
                 bullet1: "Stored recent items visited as a JSON representation of a stack in a new user data table. On load, I cached it in local storage and patched the backend during low-stress periods to maintain performance.",
                 bullet2: "Built a typing indicator (Ford Neild is typing...) using web sockets for low latency multi-client communication",
-                bullet3: "Architected development standards for migrating towards mobile responsiveness. The modular wrapper component ensured only the visible components would be loaded, abincreasing the readability and preformance of the code."
+                bullet3: "Architected development standards for migrating towards mobile responsiveness. The modular wrapper component ensured only the visible components would be loaded, increasing the readability and preformance of the code."
             }
         }
     },
