@@ -6,7 +6,7 @@ import Slider from "../Slider/index";
 
 class LearnMore extends React.Component {
   modalRef = React.createRef();
-  SLIDER_HEIGHT = 400
+  SLIDER_HEIGHT = 400;
   handleClick = () => {
     this.props.closeModal();
     this.modalRef.current.scrollTop = 0;
@@ -49,12 +49,40 @@ class LearnMore extends React.Component {
   render() {
     const { props } = this;
     const { data } = props;
-    let {
-      title,
-      githubLink,
-      liveLink,
-      slides
-    } = data;
+    let { title, githubLink, liveLink, slides, dark } = data;
+    if (!slides) {
+      return (
+        <div className={`learn-more--overlay`}>
+          <div
+            ref={this.modalRef}
+            className={`learn-more ${dark ? "dark" : ""}`}
+          >
+            <h3>{title}</h3>
+            <div className="buttons">
+              {githubLink ? (
+                <Icon link={githubLink} dark={!dark} name="fa fa-github" />
+              ) : null}
+              {liveLink ? (
+                <Icon
+                  link={liveLink}
+                  dark={!dark}
+                  name="fa fa-external-link-square"
+                />
+              ) : null}
+            </div>
+            {/* <div className="image--container">
+                        <img src={image} alt={title} />
+                    </div> */}
+            {this.renderDescription()}
+            <div onClick={this.handleClick} className="close">
+              <CloseButton dark={dark} />
+            </div>
+            {/* <div className="mask" /> */}
+          </div>
+          <div className="fill-parent" onClick={this.handleClick} />
+        </div>
+      );
+    }
     return (
       <div className={`learn-more--overlay`}>
         <div ref={this.modalRef} className={`learn-more`}>
@@ -75,7 +103,7 @@ class LearnMore extends React.Component {
           ) : null}
 
           <div className="learn-more-slider-container">
-            <Slider height={this.SLIDER_HEIGHT} slides={slides}/>
+            <Slider height={this.SLIDER_HEIGHT} slides={slides} />
           </div>
           <div onClick={this.handleClick} className="close">
             <CloseButton dark={false} />
