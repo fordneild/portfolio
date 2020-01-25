@@ -8,12 +8,19 @@
     justify-content: space-between;
     align-items: flex-start;
     color: $primary-dark;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
     >div{
         border-radius: 16px;
     }
     .image-container{
         width: 60%;
         height: auto;
+        align-self: center;
+        overflow: hidden;
+        height: auto;
+
         img{
             width: 100%;
             height: auto;
@@ -28,6 +35,18 @@
         ul{
             // -webkit-padding-start: 0px;
 
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .slide{
+        flex-direction: column !important;
+        .text-container{
+            width: 90%;
+        }
+        .image-container{
+            width: 90%;
         }
     }
 }

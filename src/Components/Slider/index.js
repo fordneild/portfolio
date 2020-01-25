@@ -12,10 +12,39 @@ class Slider extends React.Component {
     this.sliderRef = React.createRef();
   }
 
-
-  componentDidMount(){
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyDown)
     this.updateSliderPosition()
   }
+
+  componentWillUnmount(){
+    document.removeEventListener("keydown", this.handleKeyDown)
+  }
+
+  handleKeyDown = (e) => {
+    const {activeIndex} = this.state;
+    const maxIndex = this.props.slides && this.props.slides.length-1;
+    if(e.keyCode === 37){
+      if(activeIndex>0){
+        //left arrow
+        this.setActiveSlide(activeIndex-1)
+      }else{
+        //wrap around
+        this.setActiveSlide(maxIndex)
+      }
+    }else if(e.keyCode === 39){
+      //right arrow
+      if(activeIndex<maxIndex){
+        this.setActiveSlide(activeIndex+1)
+      }else{
+        //wrap around
+        this.setActiveSlide(0)
+      }
+    }else{
+
+    }
+  }
+
   slideContainerStyles={height: `${this.props.height || 400}px`}
 
   updateSliderPosition = () => {
@@ -26,16 +55,13 @@ class Slider extends React.Component {
       if (curSlide) {
         const midOfSlide = curSlide.clientWidth / 2 + curSlide.offsetLeft;
         const midOfWindow = sliderRef.current.clientWidth /2
-        console.log("midOfWindow",midOfWindow)
         const offsetLeft = -1*(midOfSlide - midOfWindow)
-        console.log("offsetLeft",offsetLeft)
         this.setState({ offsetLeft: offsetLeft });
       }
     }
   };
 
   setActiveSlide = index => {
-    console.log("Click!", index);
     this.setState({ activeIndex: index }, () => {
         this.updateSliderPosition();
     });
@@ -63,7 +89,7 @@ class Slider extends React.Component {
                 style={slideContainerStyles}
                 className={`slide-container ${activeIndex === index ? "active" : ""}`}
               >
-                  <Slide {...slideData}/>
+                  <Slide {...slideData} reversed={index%2 === 0}/>
               </div>
             );
           })}

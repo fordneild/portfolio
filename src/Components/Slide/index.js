@@ -2,14 +2,19 @@ import React from 'react'
 import './Slide.scss'
 
 const Slide = (props) => {
-    const {backgroundColor, title, image, points = [], ghost=false} = props;
+    const {backgroundColor, title, image, points = [], ghost=false, reversed} = props;
     if(ghost){
         return(
             <div className="slide" style={{backgroundColor: "transparent"}}></div>
         )
     }
+
+    const slideStyles = {
+            flexDirection: (reversed ? "row-reverse":"row"),
+        }
+    console.log("slideStyles",slideStyles)
     return(
-        <div className="slide">
+        <div style={slideStyles} className="slide">
             <div className="image-container">
                 <img src={image} alt={title}/>
             </div>

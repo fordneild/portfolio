@@ -11,6 +11,22 @@ class LearnMore extends React.Component {
     this.props.closeModal();
     this.modalRef.current.scrollTop = 0;
   };
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyDown)
+  }
+
+  componentWillUnmount(){
+    document.removeEventListener("keydown", this.handleKeyDown)
+  }
+
+  handleKeyDown = (e) => {
+    if(e.keyCode === 27){
+      this.props.closeModal()
+    }
+  }
+
+
   renderDescription = () => {
     const description = this.props.data.description;
     if (description) {

@@ -36,8 +36,6 @@
         position: relative;
         z-index: 4;
         color: $primary-light;
-        overflow-y: scroll;
-
         h3{
             font-family: $header-font;
             font-size: 34px;
@@ -70,6 +68,12 @@
                 transform: scale(1.4)
             }
         }
+
+        &.dark{
+            color: $primary !important;
+            background-color: $primary-light !important;
+        }
+
         &::-webkit-scrollbar {
             width: 0px;  /* Remove scrollbar space */
             background: transparent;  /* Optional: just make scrollbar invisible */

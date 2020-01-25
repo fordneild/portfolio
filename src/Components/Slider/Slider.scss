@@ -1,6 +1,5 @@
 .slider-window{
     width: 100%;
-    
     .slider-track{
         transition: transform 500ms ease-in-out;
         display: flex;
@@ -19,7 +18,7 @@
         &.ghost{
             transform: scale(1);
             cursor: default;
-            // background-color: rgba(255,0,0,0.6)
         }
     }
 }
+
