@@ -6,7 +6,7 @@ import Slider from "../Slider/index";
 
 class LearnMore extends React.Component {
   modalRef = React.createRef();
-  SLIDER_HEIGHT = 400;
+  SLIDER_HEIGHT = 450;
   handleClick = () => {
     this.props.closeModal();
     this.modalRef.current.scrollTop = 0;

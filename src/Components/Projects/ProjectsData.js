@@ -39,17 +39,20 @@ const sourceShowcaseData = {
         category: webDevelopment,
         slides:[
             {
-                image: require("../../assets/projectPhotos/Source_Home.png"),
+                images: [require("../../assets/projectPhotos/Source_Home.png")],
                 title: "Overview",
                 points: [
                     "Way2B1 is a Series B funded company that makes software for private wealth management.",
                     "Over my month-long winter break in January 2020, I worked on their flagship product, Source.",
                     "I built and shipped 5 full-stack features for high priority clients and banks.",
-                    "Collaborated with 6 other developers as part of an Agile team."
+                    "I collaborated with 6 other developers as part of an Agile team."
                 ]
             },
             {
-                image: require("../../assets/projectPhotos/Source_Home.png"),
+                images: [require("../../assets/projectPhotos/recentsListView.png"),require("../../assets/projectPhotos/recentsListView.png")],
+                imageStyles: {
+                    width: "50%"
+                },
                 title: "Feature: Recently Viewed",
                 points: [
                     "I built a recently viewed section for the home page. It helps our users get back to their most pressing work, and it is now one of the most used features on the hompage",
@@ -60,13 +63,13 @@ const sourceShowcaseData = {
                 ]
             },
             {
-                image: require("../../assets/projectPhotos/typingIndicator.jpg"),
+                images: [require("../../assets/projectPhotos/typingIndicator.jpg"),require("../../assets/projectPhotos/typingIndicator.jpg")],
                 title: "Feature: Typing Indicator",
                 points: [
                     "The mission statement of Way2B1 is to \"kill email in the work place\" and so I implemented a typing indicator to reduce friction between our users.",
                     "The typing indicator even functioned in group chat coversations (unlike iOS) and showed all typing users",
                     "I implemented the feature with websockets to allow for reliable low-latency multi-client communication",
-                    "In addition, I abstracted and modularized the websocket functionality so that typing indcators could be implemented easily throguhout Way2B1's three products."
+                    "In addition, I abstracted and modularized the websocket functionality so that typing indicators could be easily implemented throughout Way2B1's three products"
 
                 ]
             },

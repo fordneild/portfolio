@@ -57,7 +57,9 @@ class Slider extends React.Component {
         const midOfWindow = sliderRef.current.clientWidth /2
         const offsetLeft = -1*(midOfSlide - midOfWindow)
         this.setState({ offsetLeft: offsetLeft });
+        // curSlide.scrollTop = 0;
       }
+
     }
   };
 
