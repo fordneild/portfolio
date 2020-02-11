@@ -37,6 +37,54 @@ const sourceShowcaseData = {
         dark: false,
         gradient: "linear-gradient(150deg, rgba(255,136,119,1) 1%, rgba(124,124,149,1) 45%, rgba(125,99,91,1) 100%)",
         category: webDevelopment,
+        slides:[
+            {
+                images: [require("../../assets/projectPhotos/Source_Home.png")],
+                title: "Overview",
+                points: [
+                    "Way2B1 is a Series B funded company that makes software for private wealth management.",
+                    "Over my month-long winter break in January 2020, I worked on their flagship product, Source.",
+                    "I built and shipped 5 full-stack features for high priority clients and banks.",
+                    "I collaborated with 6 other developers as part of an Agile team."
+                ]
+            },
+            {
+                images: [require("../../assets/projectPhotos/recentsListView.png"),require("../../assets/projectPhotos/recentsGridView.png")],
+                imageStyles: {
+                    width: "50%"
+                },
+                title: "Feature: Recently Viewed",
+                points: [
+                    "I built a recently viewed section for the home page. It helps our users get back to their most pressing work, and it is now one of the most used features on the hompage",
+                    "I tracked visited pages and documents and updated the 15 most recent items viewed in Local Storage.",
+                    "I designed a stack-like structure to hold the recent items, but becuase duplicates were not allowed, I needed to support O(1) find operation.",
+                    "Thus I implemented the stack as a doubly linked list (for quick push and delete operations) but stored the nodes in a hash map for contanst time find operations,"
+
+                ]
+            },
+            {
+                images: [require("../../assets/projectPhotos/typingIndicator.jpg"),require("../../assets/projectPhotos/typingIndicator2.png")],
+                title: "Feature: Typing Indicator",
+                points: [
+                    "The mission statement of Way2B1 is to \"kill email in the work place\" and so I implemented a typing indicator to reduce friction between our users.",
+                    "The typing indicator even functioned in group chat coversations (unlike iOS) and showed all typing users",
+                    "I implemented the feature with websockets to allow for reliable low-latency multi-client communication",
+                    "In addition, I abstracted and modularized the websocket functionality so that typing indicators could be easily implemented throughout Way2B1's three products"
+
+                ]
+            },
+            // {
+            //     image: require("../../assets/projectPhotos/typingIndicator.jpg"),
+            //     title: "Feature: Typing Indicator (Ford Neild is typing ...)",
+            //     points: [
+            //         "The mission statement of Way2B1 is to \"kill email in the work place\" and so I implemented a typing indicator to reduce friction between our users.",
+            //         "The typing indicator even functioned in group chat coversations (unlike iOS) and showed all typing users",
+            //         "I implemented the feature with websockets to allow for reliable low-latency multi-client communication",
+            //         "In addition, I abstracted and modularized the websocket functionality so that typing indcators could be implemented easily throguhout Way2B1's three products."
+
+            //     ]
+            // }
+        ],
         addMask: true,
         description: {
             Background: "Way2B1 is a B-series funded company creating collaborative software for wealth management. Over my month long winter break, I worked at the Way2B1 San Francisco office on their flagship product, Source. I pushed 5 full-stack features to production for high priority banks and family offices. I gained experience working as part of an Agile team with 5 other developers using Jira.",

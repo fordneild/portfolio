@@ -1,0 +1,89 @@
+@import '../../_variables.scss';
+.slide-mask{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.15) 0%, rgba(255,255,255,0) 25%);
+    pointer-events: none;
+
+}
+.slide{
+    height: 100%;
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: $primary-dark;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    >div{
+        border-radius: 16px;
+    }
+    .images-container{
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        pointer-events: none;
+        .image-container{
+            width: 100%;
+            // overflow: hidden;
+            min-height: fit-content;
+            padding: 10px;
+            box-sizing: border-box;
+
+        }
+        img{
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+            pointer-events: none;
+        }
+    }
+    .text-container{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // overflow-y: scroll;
+        // border: 2px solid black;
+        border-radius: 0px;
+        padding: 0px 20px;
+        box-sizing: border-box;
+        // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+        h2{
+            margin: 0px 0px 5px;
+
+            padding: 0;
+        }
+        ul{
+            -webkit-padding-start: 20px;
+            margin-bottom: 40px;
+            li{
+                margin-bottom: 5px;
+            }
+
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1100px) {
+    .slide{
+        justify-content: center;
+        // flex-wrap: wrap;
+        flex-wrap: wrap;
+        .text-container{
+            width: 90%;
+        }
+        .images-container{
+            width: 90%;
+            align-self: unset;
+            position: relative !important;
+        }
+    }
+    
+}

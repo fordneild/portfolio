@@ -74,7 +74,7 @@
         width: 100%;
         margin: 0 auto;
         height: 100%;
-        padding: 25px;
+        padding: 35px;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
@@ -148,6 +148,7 @@
             -webkit-padding-start: 0px;
             list-style-type: none;
             cursor: default;
+            margin-top:14px;
             li{
                 padding: 2px 5px;
                 font-family: $header-font;

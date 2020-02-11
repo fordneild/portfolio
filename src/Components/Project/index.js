@@ -1,6 +1,5 @@
 import React from "react";
 import "./Project.scss";
-import LearnMore from "../LeanMore/";
 
 class Project extends React.Component {
   constructor(props) {
@@ -86,7 +85,7 @@ class Project extends React.Component {
       company,
       technologies,
       dark,
-      gradient
+      gradient,
     } = data;
     const {showcaseImage} = showcase;
     return (

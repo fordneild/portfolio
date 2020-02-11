@@ -1,0 +1,24 @@
+.slider-window{
+    width: 100%;
+    .slider-track{
+        transition: transform 500ms ease-in-out;
+        display: flex;
+    }    
+    .slide-container{
+        cursor: pointer;
+        min-width: 70%;
+        max-width: 70%;
+        transform: scale(0.75);
+        transition: transform 200ms ease-in-out;
+        &.active{
+            transform: scale(1);
+            cursor: default;
+        }
+
+        &.ghost{
+            transform: scale(1);
+            cursor: default;
+        }
+    }
+}
+
