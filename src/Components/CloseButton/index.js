@@ -1,6 +1,6 @@
 import React from 'react'
  const CloseButton = (props) => {
-     const {dark, width, height} = props
+     const {dark} = props
      return(
         <svg width="20" version="1.1" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 64 64" enableBackground="0 0 64 64">
             <g>

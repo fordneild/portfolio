@@ -49,7 +49,7 @@ const sourceShowcaseData = {
                 ]
             },
             {
-                images: [require("../../assets/projectPhotos/recentsListView.png"),require("../../assets/projectPhotos/recentsListView.png")],
+                images: [require("../../assets/projectPhotos/recentsListView.png"),require("../../assets/projectPhotos/recentsGridView.png")],
                 imageStyles: {
                     width: "50%"
                 },
@@ -63,7 +63,7 @@ const sourceShowcaseData = {
                 ]
             },
             {
-                images: [require("../../assets/projectPhotos/typingIndicator.jpg"),require("../../assets/projectPhotos/typingIndicator.jpg")],
+                images: [require("../../assets/projectPhotos/typingIndicator.jpg"),require("../../assets/projectPhotos/typingIndicator2.png")],
                 title: "Feature: Typing Indicator",
                 points: [
                     "The mission statement of Way2B1 is to \"kill email in the work place\" and so I implemented a typing indicator to reduce friction between our users.",

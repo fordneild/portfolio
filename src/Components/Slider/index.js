@@ -21,25 +21,36 @@ class Slider extends React.Component {
     document.removeEventListener("keydown", this.handleKeyDown)
   }
 
-  handleKeyDown = (e) => {
+  incrementSlide(){
     const {activeIndex} = this.state;
     const maxIndex = this.props.slides && this.props.slides.length-1;
+    //right arrow
+    if(activeIndex<maxIndex){
+      this.setActiveSlide(activeIndex+1)
+    }else{
+      //wrap around
+      this.setActiveSlide(0)
+    }
+  }
+
+  decrementSlide(){
+    const {activeIndex} = this.state;
+    const maxIndex = this.props.slides && this.props.slides.length-1;
+    if(activeIndex>0){
+      this.setActiveSlide(activeIndex-1)
+    }else{
+      //wrap around
+      this.setActiveSlide(maxIndex)
+    }
+  }
+
+  handleKeyDown = (e) => {
     if(e.keyCode === 37){
-      if(activeIndex>0){
-        //left arrow
-        this.setActiveSlide(activeIndex-1)
-      }else{
-        //wrap around
-        this.setActiveSlide(maxIndex)
-      }
+      //left arrow
+      this.decrementSlide()
     }else if(e.keyCode === 39){
       //right arrow
-      if(activeIndex<maxIndex){
-        this.setActiveSlide(activeIndex+1)
-      }else{
-        //wrap around
-        this.setActiveSlide(0)
-      }
+      this.incrementSlide()
     }else{
 
     }
@@ -91,7 +102,7 @@ class Slider extends React.Component {
                 style={slideContainerStyles}
                 className={`slide-container ${activeIndex === index ? "active" : ""}`}
               >
-                  <Slide {...slideData} reversed={index%2 === 0}/>
+                  <Slide increment={this.incrementSlide} decrementSlide={this.decrementSlide} {...slideData} reversed={index%2 === 0}/>
               </div>
             );
           })}

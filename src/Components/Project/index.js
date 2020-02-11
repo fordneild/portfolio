@@ -1,6 +1,5 @@
 import React from "react";
 import "./Project.scss";
-import LearnMore from "../LeanMore/";
 
 class Project extends React.Component {
   constructor(props) {
