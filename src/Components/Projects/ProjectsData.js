@@ -231,7 +231,7 @@ const sourceShowcaseData = {
     
     {
         show: 1,
-        title: "Binary Text Classification",
+        title: "Binary Semantic Text Analysis",
         showcase: binaryTextClassificationShowcaseData,
         year: "2018",
         company: "Personal Project",
