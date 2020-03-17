@@ -30,11 +30,7 @@ const About = () => {
               Flow. 
               <br />
               <br /> 
-              Currently, I am working at Way2B1 in San Francisco over my
-              month-long winter break. I am also seeking an internship for
-              Summer 2020 that will expand upon my skills in software
-              development and build real-world experience as part of a
-              programming team.
+              Currently, I am studying from home and working on personal ML projects. I am excited to intern at Komodo Health in Summer 2020, where I will be working as a Full Stack Developer.
             </p>
             <br />
               <br /> 
