@@ -13,6 +13,13 @@ const sourceShowcaseData = {
      showcaseImage: require("../../assets/projectPhotos/NN_analysis2.jpg"),
  }
 
+ const memeHubShowcaseData = {
+    backgroundSize: "38%",
+    backgroundColor: "#000000",
+    showcaseImage: require("../../assets/projectPhotos/memeHubStack.png"),
+    showcaseImageWidth: "690px"
+}
+
  const pbsShowcaseData = {
      backgroundSize: "75%",
      backgroundColor: "#EBEBE8",
@@ -25,6 +32,82 @@ const sourceShowcaseData = {
 
 
  const projectsData = [
+    {
+        show: 1,
+        showcase: memeHubShowcaseData,
+        title: "Memehub",
+        year: "2020",
+        role: "Founder",
+        company: "Personal Project",
+        technologies: ["Java","Flask","React","Neo4j","Selenium"],
+        image: require("../../assets/projectPhotos/memeHub1.png"),
+        // backgroundSize: "80%",
+        // image: "https://acutrans.com/wp-content/uploads/2019/10/chicago_skyline-e1571623984482.jpg",
+        dark: false,
+        gradient: "radial-gradient(circle, rgba(243,158,54,1) 14%, rgba(2,0,36,1) 76%)",
+        category: webDevelopment,
+        addMask: true,
+        // liveLink: "https://www.way2b1.com/",
+        // description: {
+        //     Background: "Way2B1 makes software to simplify wealth management and streamline approval for investments. They currently offer a suite of user-friendly products to help do this. Their website, however, was not up to their standards.",
+        //     What_I_Did: {
+        //         bullet1: "I built a clear and sleek React-based website to serve the first point of contact with potential clients.",
+        //         bullet2: "I designed and developed a content management system with Firebase to allow higher-ups to easily change the site’s images and copy without needing to touch the codebase.",
+        //         bullet3: "There were 5 views in total each with custom-made responsive components such as carousels, accordions, and modals.",
+        //         bullet4: "I created two React forms with unobtrusive user validation.",
+        //         bullet5: "I integrated the careers page with the Google Hire API to allow for dynamic job posting and applications."
+        //     }
+        // },
+        slides:[
+            {
+                images: [require("../../assets/projectPhotos/memeHub.png")],
+                title: "The Mission",
+                points: [
+                    "Supplying the massive market for memes",
+                    "Aggregating memes from Facebook, Reddit, Instagram and TikTok",
+                    "Delivering  memes with a kick-ass reccomendation system",
+                    "Making you smile"
+                ]
+            },
+            {
+                images: [require("../../assets/projectPhotos/recentsListView.png"),require("../../assets/projectPhotos/recentsGridView.png")],
+                imageStyles: {
+                    width: "50%"
+                },
+                title: "Feature: Recently Viewed",
+                points: [
+                    "I built a recently viewed section for the home page. It helps our users get back to their most pressing work, and it is now one of the most used features on the hompage",
+                    "I tracked visited pages and documents and updated the 15 most recent items viewed in Local Storage.",
+                    "I designed a stack-like structure to hold the recent items, but becuase duplicates were not allowed, I needed to support O(1) find operation.",
+                    "Thus I implemented the stack as a doubly linked list (for quick push and delete operations) but stored the nodes in a hash map for contanst time find operations,"
+
+                ]
+            },
+            {
+                images: [require("../../assets/projectPhotos/typingIndicator.jpg"),require("../../assets/projectPhotos/typingIndicator2.png")],
+                title: "Feature: Typing Indicator",
+                points: [
+                    "The mission statement of Way2B1 is to \"kill email in the work place\" and so I implemented a typing indicator to reduce friction between our users.",
+                    "The typing indicator even functioned in group chat coversations (unlike iOS) and showed all typing users",
+                    "I implemented the feature with websockets to allow for reliable low-latency multi-client communication",
+                    "In addition, I abstracted and modularized the websocket functionality so that typing indicators could be easily implemented throughout Way2B1's three products"
+
+                ]
+            },
+            // {
+            //     image: require("../../assets/projectPhotos/typingIndicator.jpg"),
+            //     title: "Feature: Typing Indicator (Ford Neild is typing ...)",
+            //     points: [
+            //         "The mission statement of Way2B1 is to \"kill email in the work place\" and so I implemented a typing indicator to reduce friction between our users.",
+            //         "The typing indicator even functioned in group chat coversations (unlike iOS) and showed all typing users",
+            //         "I implemented the feature with websockets to allow for reliable low-latency multi-client communication",
+            //         "In addition, I abstracted and modularized the websocket functionality so that typing indcators could be implemented easily throguhout Way2B1's three products."
+
+            //     ]
+            // }
+        ],
+        addMask: true
+    },
     {
         show: 1,
         showcase: sourceShowcaseData,
@@ -91,7 +174,8 @@ const sourceShowcaseData = {
             What_I_Did: {
                 bullet1: "Stored recent items visited as a JSON representation of a stack in a new user data table. On load, I cached it in local storage and patched the backend during low-stress periods to maintain performance.",
                 bullet2: "Built a typing indicator (Ford Neild is typing...) using web sockets for low latency multi-client communication",
-                bullet3: "Architected development standards for migrating towards mobile responsiveness. The modular wrapper component ensured only the visible components would be loaded, increasing the readability and preformance of the code."
+                // bullet3: "Pu"\
+            
             }
         }
     },

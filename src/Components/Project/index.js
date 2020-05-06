@@ -87,7 +87,7 @@ class Project extends React.Component {
       dark,
       gradient,
     } = data;
-    const {showcaseImage} = showcase;
+    const {showcaseImage, showcaseImageWidth} = showcase;
     return (
       <div
         //with showcase thingy
@@ -130,7 +130,7 @@ class Project extends React.Component {
           </div>
           {this.shouldShowShowcaseStyles() && showcaseImage? (
             <div className="rising-content--showcase">
-                <img src={showcaseImage} alt="showcaseImage"/>
+                <img style={showcaseImageWidth ? {'width': showcaseImageWidth}: {}} src={showcaseImage} alt="showcaseImage"/>
             </div>
           ) : null}
         </div>
