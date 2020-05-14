@@ -2,7 +2,7 @@ import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
 import "./Landing.scss";
-import LandingImage from "./landingImage2.png";
+// import LandingImage from "./landingImage.png";
 
 class Landing extends React.Component {
   constructor(props) {
@@ -90,7 +90,7 @@ class Landing extends React.Component {
             style={this.getHeightDependentStyle("height", 110)}
             // className={isVisible ? "fixed" : null}
             className="fixed"
-            src={LandingImage}
+            src={"https://firebasestorage.googleapis.com/v0/b/portfolio-9117a.appspot.com/o/landingImage.png?alt=media&token=12519bd8-c3e4-4d92-ab4b-8371161be400"}
           />
           <div
             style={this.getHeightDependentStyle("marginTop", 24)}
