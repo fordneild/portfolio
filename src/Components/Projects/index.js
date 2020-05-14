@@ -1,7 +1,7 @@
 import React from "react";
 import "./Projects.scss";
 import Project from "../Project";
-import LearnMore from "../LeanMore/";
+import LearnMore from "../LearnMore/";
 import data from "./ProjectsData";
 import {categories} from "./ProjectsData"
 import {

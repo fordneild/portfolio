@@ -17,7 +17,16 @@
   .fixed{
     position: fixed;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+
+    &.small{
+      filter: blur(10px);
+      transition: opacity 750ms ease-in-out;
+    }
+
+    &.hidden{
+      opacity: 0;
+    }
   }
   .landing__intro {
     margin-top: 32vh;
