@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://fordneild.github.io/portfolio",
+  "homepage": "/",
   "dependencies": {
     "body-scroll-lock": "^2.6.4",
     "node-sass": "^4.13.1",
