@@ -1,208 +1,212 @@
-@import '../../variables';
+@import "../../variables";
 
 @media screen and (min-width: 1200px) {
-    .projects--container{
-        &.showcase{
-            .project{
-                .rising-content{
-                    .rising-content--showcase{
-                        display: flex;
-                        opacity: 0;
-                        transition: opacity 150ms ease-in-out;
-                        // max-height: 100%;
-                        align-items: center;
-                        justify-content: center;
-                        overflow: hidden;
-                        img{
-                            width: 500px;
-                            height: auto;
-                        }
-                    }
-                }
-                &.showcase{
-                    width: 1155px;
-                    margin: 15px auto;
-                }
+  .projects--container {
+    &.showcase {
+      .project {
+        .rising-content {
+          .rising-content--showcase {
+            display: flex;
+            opacity: 0;
+            transition: opacity 150ms ease-in-out;
+            // max-height: 100%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            img {
+              width: 500px;
+              height: auto;
             }
+          }
         }
+        &.showcase {
+          width: 1155px;
+          margin: 15px auto;
+        }
+      }
     }
+  }
 }
 
-.project{
-    width: 570px;
-    height: 400px;
-    margin: 15px;
-    position: relative;
+.project {
+  width: 570px;
+  height: 400px;
+  margin: 15px;
+  position: relative;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+
+  &.dark {
+    color: $primary-dark;
+    background-color: white;
+  }
+
+  &:hover,
+  &:active,
+  &.hover-effects {
+    .gradient {
+      opacity: 1;
+    }
+
+    .rising-content {
+      transform: translateY(0px);
+      .rising-content--showcase {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .gradient {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+  }
+
+  .rising-content {
+    transform: translateY(250px);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 35px;
     box-sizing: border-box;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    color: white;
-    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    .rising-content--showcase {
+      display: none;
+    }
+    .title--container {
+      .title {
+        margin: 0;
+        font-size: 34px;
+        font-family: $header-font;
+        font-weight: bolder;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+    }
+    .company {
+      margin: 0;
+      font-family: $body-font;
+      font-size: 22px;
+      font-weight: lighter;
+      margin-bottom: 70px;
+    }
 
-    &.dark{
-        color: $primary-dark;
+    .learn-more-button {
+      position: relative;
+      font-family: $body-font;
+      font-size: 24px;
+      font-weight: bold;
+      width: fit-content;
+      margin-bottom: 80px;
+      cursor: pointer;
+      &::after {
+        content: " ";
+        width: 19px;
+        height: 2px;
         background-color: white;
-    }
-
-    &:hover, &:active, &.hover-effects{
-        .gradient{
-            opacity: 1;
-        }
-
-        .rising-content{
-            transform: translateY(0px);
-            .rising-content--showcase{
-                opacity: 1 !important;
-            }
-        }
-    }
-
-    .gradient{
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity .3s ease-in-out;
         position: absolute;
+        bottom: 0;
+        left: 1px;
+        transition: width 250ms ease-in-out;
+      }
+      &.dark {
+        &::after {
+          background-color: black;
+        }
+      }
 
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
     }
 
-    .rising-content{
-        transform: translateY(270px);
-        transition: transform .3s ease-in-out;
-        width: 100%;
-        margin: 0 auto;
-        height: 100%;
-        padding: 35px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .rising-content--showcase{
-            display: none;
+    .about {
+      display: flex;
+      p {
+        font-size: 20px;
+        margin: 0;
+
+        margin-right: 20px;
+        span {
+          font-weight: bold;
         }
-        .title{
-            margin: 0;
-            font-size: 34px;
-            font-family: $header-font;
-            font-weight: bolder;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-
-        }
-        .company{
-            margin: 0;
-            font-family: $body-font;
-            font-size: 22px;
-            font-weight: lighter;
-            margin-bottom: 70px;
-        }
-
-        .learn-more-button{
-            position: relative;
-            font-family: $body-font;
-            font-size: 24px;
-            font-weight: bold;
-            width: fit-content;
-            margin-bottom: 90px;
-            cursor: pointer;
-            &::after{
-                content: ' ';
-                width: 19px;
-                height: 2px;
-                background-color: white;
-                position: absolute;
-                bottom: 0;
-                left: 1px;
-                transition: width 250ms ease-in-out;
-            }
-            &.dark{
-                &::after{
-                    background-color: black;
-                }
-            }
-
-            &:hover{
-                &::after{
-                    width: 100%;
-                }
-            }
-        }
-
-        .about{
-            display: flex;
-            p{
-                font-size: 20px;
-                margin: 0;
-
-                margin-right: 20px;
-                span{
-                    font-weight: bold;
-                }
-            }
-        }
-
-        .technologies{
-            display: flex;
-            -webkit-padding-start: 0px;
-            list-style-type: none;
-            cursor: default;
-            margin-top:14px;
-            li{
-                padding: 2px 5px;
-                font-family: $header-font;
-                margin-right: 10px;
-                background-color: black;
-                color: white;
-                font-size: 16px;
-            }
-            
-        }
-
+      }
     }
+
+    .technologies {
+      display: flex;
+      -webkit-padding-start: 0px;
+      list-style-type: none;
+      cursor: default;
+      margin-top: 14px;
+      li {
+        padding: 2px 5px;
+        font-family: $header-font;
+        margin-right: 10px;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        border-radius: 2px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .project{
-        width: 90vw !important;
-        height: 63.15vw;
-        .title{
-            width: 90%;
-            font-size: 20px;
-        }
-        .rising-content{
-            padding: 15px;
-            height: 100%;
-            transform: translateY(60%);
-            display: flex;
-            flex-direction: column;
-            // justify-content: space-between;
-            .title{
-                font-size: 6vw;
-                height: 12vw;
-                max-height: 12vw
-            }
-            .company{
-                margin-bottom: 0px;
-
-            }
-            .learn-more-button{
-                font-size: 4.5vw;
-                margin-bottom: 13vw;
-            }
-            .about{
-                p{
-                    font-size: 3vw;
-                }
-            }
-            .technologies{
-                li{
-                    font-size: 3vw;
-                    font-weight: bold;
-                    min-height: 3vw;
-                }
-            }
-        }
+  .project {
+    width: 90vw !important;
+    height: 63.15vw;
+    .title {
+      width: 90%;
+      font-size: 20px;
     }
+    .rising-content {
+      padding: 15px;
+      height: 100%;
+      transform: translateY(61%);
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      .title--container {
+        display: flex;
+        align-items: center;
+        // height: 12vw;
+        // max-height: 12vw;
+        .title {
+          font-size: 6vw;
+        }
+      }
+      .company {
+        margin-bottom: 50px;
+      }
+      .learn-more-button {
+        font-size: 4.5vw;
+        margin-bottom: 10vw;
+      }
+      .about {
+        p {
+          font-size: 3vw;
+        }
+      }
+      .technologies {
+        li {
+          font-size: 3vw;
+          font-weight: bold;
+          min-height: 3vw;
+        }
+      }
+    }
+  }
 }

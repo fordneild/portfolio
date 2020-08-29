@@ -5,15 +5,15 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobileTouch: null
+      mobileTouch: null,
       // backgroundImage: this.props.data.image,
       // backgroundImageNum: 0
     };
   }
 
-  toggleMobileTouch = boolean => {
+  toggleMobileTouch = (boolean) => {
     this.setState({
-      mobileTouch: boolean
+      mobileTouch: boolean,
     });
   };
 
@@ -35,7 +35,7 @@ class Project extends React.Component {
       console.log(options[imageNum]);
       this.setState({
         backgroundImage: options[imageNum],
-        backgroundImageNum: imageNum
+        backgroundImageNum: imageNum,
       });
     }
   };
@@ -52,7 +52,7 @@ class Project extends React.Component {
       imageLeft,
       addMask,
       showcase,
-      backgroundColor = "white"
+      backgroundColor = "white",
     } = data;
     if (this.shouldShowShowcaseStyles()) {
       return {
@@ -61,14 +61,16 @@ class Project extends React.Component {
         backgroundPositionY: showcase.backgroundPositionY || imageTop,
         backgroundPositionX: showcase.backgroundPositionX || imageLeft,
         backgroundSize: showcase.backgroundSize || null,
-        backgroundColor: showcase.backgroundColor || backgroundColor
+        backgroundColor: showcase.backgroundColor || backgroundColor,
       };
     } else {
       return {
         backgroundImage: `${!dark && addMask ? darkOverlay : ""}
                 url(${image})`,
         backgroundPositionY: imageTop,
-        backgroundPositionX: imageLeft
+        backgroundSize: showcase?.backgroundSize || null,
+        backgroundPositionX: imageLeft,
+        backgroundColor: showcase?.backgroundColor || backgroundColor,
       };
     }
   };
@@ -87,7 +89,7 @@ class Project extends React.Component {
       dark,
       gradient,
     } = data;
-    const {showcaseImage, showcaseImageWidth} = showcase;
+    const { showcaseImage, showcaseImageWidth } = showcase;
     return (
       <div
         //with showcase thingy
@@ -99,17 +101,17 @@ class Project extends React.Component {
         onTouchStart={() => this.toggleMobileTouch(true)}
         onTouchEnd={() => this.toggleMobileTouch(false)}
         //onMouseLeave = {() => this.selectRandomBackgroundImage()}
-        style={this.getBackgroundImage()}
-      >
+        style={this.getBackgroundImage()}>
         <div className="gradient" style={{ backgroundImage: gradient }}></div>
         <div className="rising-content">
           <div className="rising-content--main">
-            <h2 className="title">{title}</h2>
+            <div className="title--container">
+              <h2 className="title">{title}</h2>
+            </div>
             <h4 className="company">{company}</h4>
             <h3
               onClick={() => openModal(data)}
-              className={`learn-more-button ${dark ? "dark" : ""}`}
-            >
+              className={`learn-more-button ${dark ? "dark" : ""}`}>
               Learn More
             </h3>
             <div className="about">
@@ -128,9 +130,13 @@ class Project extends React.Component {
               })}
             </ul>
           </div>
-          {this.shouldShowShowcaseStyles() && showcaseImage? (
+          {this.shouldShowShowcaseStyles() && showcaseImage ? (
             <div className="rising-content--showcase">
-                <img style={showcaseImageWidth ? {'width': showcaseImageWidth}: {}} src={showcaseImage} alt="showcaseImage"/>
+              <img
+                style={showcaseImageWidth ? { width: showcaseImageWidth } : {}}
+                src={showcaseImage}
+                alt="showcaseImage"
+              />
             </div>
           ) : null}
         </div>
