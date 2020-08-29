@@ -23,7 +23,9 @@ const IconsData = [
 const ContactMe = () => {
   return (
     <div className="contact-me--container">
-      <a id="contact-me" />
+      <a href="contact-me-section" id="contact-me">
+        {" "}
+      </a>
       <h3 className="subheader">
         Want to work together,
         <br /> or have comments on my work?

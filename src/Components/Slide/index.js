@@ -1,17 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Slide.scss";
 
-const Slide = props => {
+const Slide = (props) => {
   const {
-    backgroundColor,
     title,
     images = [],
     imageStyles,
     points = [],
     ghost = false,
     reversed,
-    increment,
-    decrement
   } = props;
   if (ghost) {
     return (
@@ -20,31 +17,32 @@ const Slide = props => {
   }
   // STARTED ADDING SWIPE MOTION DETECTION
   //need some state tracking to keep track of whther or not we moved left or right
-//   const slideRef = React.createRef();
-//   useEffect(() => {
-//     const div = slideRef.current;
-//     // subscribe event
-//     div.addEventListener("touchstart", handleTouchStart);
-//     return () => {
-//       // unsubscribe event
-//       div.removeEventListener("touchend", handleTouchEnd);
-//     };
-//   }, []);
+  //   const slideRef = React.createRef();
+  //   useEffect(() => {
+  //     const div = slideRef.current;
+  //     // subscribe event
+  //     div.addEventListener("touchstart", handleTouchStart);
+  //     return () => {
+  //       // unsubscribe event
+  //       div.removeEventListener("touchend", handleTouchEnd);
+  //     };
+  //   }, []);
 
-//   const handleTouchEnd = e => {};
+  //   const handleTouchEnd = e => {};
 
-//   const handleTouchStart = e => {};
+  //   const handleTouchStart = e => {};
   // END ADDING SWIPE MOTION DETECTION
 
   const slideStyles = {
-    flexDirection: reversed ? "row-reverse" : "row"
+    flexDirection: reversed ? "row-reverse" : "row",
   };
   return (
     <>
       <div className="slide-mask"></div>
-      <div 
-    //   ref={slideRef} 
-      style={slideStyles} className="slide">
+      <div
+        //   ref={slideRef}
+        style={slideStyles}
+        className="slide">
         <div className="ghost images-container"></div>
         <div style={{ position: "fixed" }} className="images-container">
           {images.map((image, index) => {

@@ -5,7 +5,9 @@ import ProfilePhoto from "../../assets/portfolio_image.jpg";
 export default function About() {
   return (
     <section className="about--container">
-      <a id="about" />
+      <a href="about-section" id="about">
+        {" "}
+      </a>
       <div className="sheered">
         <div className="reverse-sheered">
           <h1>about</h1>

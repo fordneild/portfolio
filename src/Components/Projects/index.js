@@ -3,11 +3,11 @@ import "./Projects.scss";
 import Project from "../Project";
 import LearnMore from "../LeanMore/";
 import data from "./ProjectsData";
-import {categories} from "./ProjectsData"
+import { categories } from "./ProjectsData";
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks
+  clearAllBodyScrollLocks,
 } from "body-scroll-lock";
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -18,7 +18,7 @@ class Projects extends React.Component {
       activeFilter: this.showcase,
       learnMoreData: null,
       isVisible: false,
-      backgroundStyles: this.DEFAULT_BACKGROUND_STYLES
+      backgroundStyles: this.DEFAULT_BACKGROUND_STYLES,
     };
     this.containerRef = React.createRef();
   }
@@ -27,7 +27,7 @@ class Projects extends React.Component {
   DISABLE_BG_ANIMATION = false;
   DEFAULT_BACKGROUND_STYLES = {
     backgroundPosition: "50% 50%",
-    backgroundSize: "100%"
+    backgroundSize: "100%",
   };
   MAX_WINDOW_WIDTH_FOR_ANIMATION = 1600;
   MIN_WINDOW_WIDTH_FOR_ANIMATION = 600;
@@ -44,10 +44,10 @@ class Projects extends React.Component {
   // -------------------------------
   componentDidMount() {
     this.updateBackground();
-    //this.onChange(this.state.isVisible)
   }
 
   componentWillUnmount() {
+    clearAllBodyScrollLocks();
     window.removeEventListener("scroll", this.updateBackground);
   }
 
@@ -57,31 +57,17 @@ class Projects extends React.Component {
       percent = percent * -1;
     }
     let propertyValue = min + (max - min) * percent;
-    // if(propertyValue > max){
-    //     propertyValue = max
-    // }
-    // if(propertyValue < min){
-    //     propertyValue = min;
-    // }
     return propertyValue;
   }
 
   updateBackground = () => {
     const validWindowSize = this.checkWindowSize();
     if (this.containerRef.current && validWindowSize) {
-      const { top, left } = this.containerRef.current.getBoundingClientRect();
-      const minBackgroundSize = 100;
-      const maxBackgroundSize = 120;
+      const { top } = this.containerRef.current.getBoundingClientRect();
       const deltaY = -1 * top;
       const containerSize = this.containerRef.current.getBoundingClientRect()
         .height;
       const percentScrolled = deltaY / containerSize;
-      let backgroundSize = this.calculateProperty(
-        minBackgroundSize,
-        maxBackgroundSize,
-        percentScrolled,
-        true
-      );
       let backgroundLeft = this.calculateProperty(
         50,
         100,
@@ -90,11 +76,11 @@ class Projects extends React.Component {
       );
 
       const backgroundStyles = {
-        backgroundPosition: `${backgroundLeft}% 50%`
+        backgroundPosition: `${backgroundLeft}% 50%`,
         // backgroundSize: `${backgroundSize}%`
       };
       this.setState({
-        backgroundStyles: backgroundStyles
+        backgroundStyles: backgroundStyles,
       });
       // }else if(!validWindowSize){
       //     this.setState({
@@ -103,7 +89,7 @@ class Projects extends React.Component {
     }
   };
 
-  onChange = isVisible => {
+  onChange = (isVisible) => {
     const validWindowSize = this.checkWindowSize();
     if (isVisible && !this.DISABLE_BG_ANIMATION && validWindowSize) {
       window.addEventListener("scroll", this.updateBackground);
@@ -111,24 +97,18 @@ class Projects extends React.Component {
       window.removeEventListener("scroll", this.updateBackground);
     }
     this.setState({
-      isVisible: isVisible
+      isVisible: isVisible,
     });
   };
   // -------------------------------
 
-  componentWillUnmount() {
-    clearAllBodyScrollLocks();
-    window.removeEventListener("scroll", this.updateBackground);
-  }
-
   getCategories() {
-    const newCatgories = categories.slice(0)
-    newCatgories.splice(0, 0, this.showcase)
-    return newCatgories
+    const newCatgories = categories.slice(0);
+    newCatgories.splice(0, 0, this.showcase);
+    return newCatgories;
   }
 
-
-  openModal = learnMoreData => {
+  openModal = (learnMoreData) => {
     this.setState({ learnMoreData: learnMoreData });
     disableBodyScroll(this.targetModalElement);
   };
@@ -138,28 +118,29 @@ class Projects extends React.Component {
     enableBodyScroll(this.targetModalElement);
   };
 
-  handleFilterClick = filter => {
+  handleFilterClick = (filter) => {
     this.setState({
-      activeFilter: filter
+      activeFilter: filter,
     });
   };
   render() {
-    const { state, props,showcase } = this;
+    const { state, showcase } = this;
     const { activeFilter, learnMoreData } = state;
 
     return (
       <VisibilitySensor
         partialVisibility={true}
         onChange={this.onChange}
-        offset={{ top: 50 }}
-      >
+        offset={{ top: 50 }}>
         <div
-          className={`projects--container ${activeFilter === showcase? "showcase": ""}`}
-
+          className={`projects--container ${
+            activeFilter === showcase ? "showcase" : ""
+          }`}
           style={this.state.backgroundStyles}
-          ref={this.containerRef}
-        >
-          <a id="projects" />
+          ref={this.containerRef}>
+          <a href="projects-section" id="projects">
+            {""}
+          </a>
           <h1>Projects</h1>
           <ul className="menu">
             {this.getCategories().map((filter, index) => {
@@ -169,8 +150,7 @@ class Projects extends React.Component {
                     filter === showcase ? "showcase" : ""
                   }`}
                   key={index}
-                  onClick={() => this.handleFilterClick(filter)}
-                >
+                  onClick={() => this.handleFilterClick(filter)}>
                   {filter}
                 </li>
               );
@@ -178,7 +158,7 @@ class Projects extends React.Component {
           </ul>
           <div className="projects">
             {data
-              .filter(projectData => {
+              .filter((projectData) => {
                 if (projectData.show === 1) {
                   if (activeFilter === this.showcase) {
                     return projectData.showcase;

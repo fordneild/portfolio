@@ -11,8 +11,8 @@ class Landing extends React.Component {
       isVisible: false,
       reflectionStyles: {
         filter: `blur(${this.INITIAL_BLUR}px)`,
-        transform: "rotate(180deg) scale(-1,1.5) translateY(0px)"
-      }
+        transform: "rotate(180deg) scale(-1,1.5) translateY(0px)",
+      },
     };
   }
 
@@ -45,22 +45,24 @@ class Landing extends React.Component {
     }
     const reflectionStyles = {
       filter: `blur(${blur}px)`,
-      transform: `rotate(180deg) scale(-1,1.5) translateY(${-1 * translateY}px)`
+      transform: `rotate(180deg) scale(-1,1.5) translateY(${
+        -1 * translateY
+      }px)`,
     };
     this.setState({
       reflectionStyles: reflectionStyles,
-      translateY: translateY
+      translateY: translateY,
     });
   };
 
-  onChange = isVisible => {
+  onChange = (isVisible) => {
     if (isVisible) {
       window.addEventListener("scroll", this.updateReflection);
     } else {
       window.removeEventListener("scroll", this.updateReflection);
     }
     this.setState({
-      isVisible: isVisible
+      isVisible: isVisible,
     });
     this.props.toggleLandingVisible(isVisible);
   };
@@ -78,35 +80,34 @@ class Landing extends React.Component {
       <VisibilitySensor
         partialVisibility={true}
         onChange={this.onChange}
-        offset={{ top: 50 }}
-      >
+        offset={{ top: 50 }}>
         <section
           style={this.getHeightDependentStyle("height", 110)}
           className="landing"
-          onTouchMove={e => e.preventDefault()}
-        >
-          <a id="#home"></a>
+          onTouchMove={(e) => e.preventDefault()}>
+          <a href="landing-section" id="#home">
+            {" "}
+          </a>
           <img
             style={this.getHeightDependentStyle("height", 110)}
             // className={isVisible ? "fixed" : null}
             className="fixed"
+            alt="space landing"
             src={LandingImage}
           />
           <div
             style={this.getHeightDependentStyle("marginTop", 24)}
-            className={`landing__intro ${!isVisible ? "" : ""}`}
-          >
+            className={`landing__intro ${!isVisible ? "" : ""}`}>
             <div
-            style={this.getHeightDependentStyle("marginTop", 20)} 
-            className="text">
+              style={this.getHeightDependentStyle("marginTop", 20)}
+              className="text">
               <h4 style={h4Styles}>Meet Me</h4>
               <h1 style={h1Styles}>Ford Neild</h1>
               <h4 style={h4Styles}>Full Stack Developer</h4>
             </div>
             <div
               className="text-relflection"
-              style={this.state.reflectionStyles}
-            >
+              style={this.state.reflectionStyles}>
               <h4 style={h4Styles}>Meet Me</h4>
               <h1 style={h1Styles}>Ford Neild</h1>
               <h4 style={h4Styles}>Full Stack Developer</h4>
