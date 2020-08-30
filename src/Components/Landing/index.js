@@ -2,7 +2,6 @@ import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
 import "./Landing.scss";
-import LandingImage from "./landingImage2.png";
 
 class Landing extends React.Component {
   constructor(props) {
@@ -13,6 +12,7 @@ class Landing extends React.Component {
         filter: `blur(${this.INITIAL_BLUR}px)`,
         transform: "rotate(180deg) scale(-1,1.5) translateY(0px)",
       },
+      heroLoaded: false,
     };
   }
 
@@ -72,7 +72,7 @@ class Landing extends React.Component {
   };
 
   render() {
-    const { isVisible } = this.state;
+    const { isVisible, heroLoaded } = this.state;
     const h4Styles = this.getHeightDependentStyle("fontSize", 4);
     const h1Styles = this.getHeightDependentStyle("fontSize", 7);
     return (
@@ -91,9 +91,29 @@ class Landing extends React.Component {
           <img
             style={this.getHeightDependentStyle("height", 110)}
             // className={isVisible ? "fixed" : null}
+            alt="hero-large"
             className="fixed"
-            alt="space landing"
-            src={LandingImage}
+            onLoad={() => {
+              console.log("big image finished loading");
+              this.setState((prevState) => {
+                return {
+                  ...prevState,
+                  heroLoaded: true,
+                };
+              });
+            }}
+            src={
+              "https://firebasestorage.googleapis.com/v0/b/portfolio-9117a.appspot.com/o/landingImage.png?alt=media&token=12519bd8-c3e4-4d92-ab4b-8371161be400"
+            }
+          />
+          <img
+            style={this.getHeightDependentStyle("height", 110)}
+            // className={isVisible ? "fixed" : null}
+            alt="hero-small"
+            className={`fixed small ${heroLoaded ? "hidden" : ""}`}
+            src={
+              "https://firebasestorage.googleapis.com/v0/b/portfolio-9117a.appspot.com/o/landingImageSmall.jpg?alt=media&token=c2e60abb-c006-4371-a5a6-ed8f4a6c6a8d"
+            }
           />
           <div
             style={this.getHeightDependentStyle("marginTop", 24)}
