@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.scss";
-import Resume from "../../assets/docs/Resume.pdf";
+import Resume from "../../assets/docs/FordNeildResume.pdf";
 
 class Navbar extends React.Component {
   constructor(props) {

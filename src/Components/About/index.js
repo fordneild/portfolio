@@ -14,10 +14,10 @@ export default function About() {
           <div className="about__content">
             <div className="about__content__column">
               <p>
-                I'm Ford, a Senior at Johns Hopkins University, studying
+                I'm Ford, a senior at Johns Hopkins University, studying
                 computer science. I have a passion for building things, and
                 coding enables me to develop software that can have an immediate
-                impact on people all over the world.
+                impact on people worldwide.
               </p>
               <div className="profile-picture--container">
                 <img src={ProfilePhoto} draggable="false" alt="Ford Neild" />
@@ -29,12 +29,11 @@ export default function About() {
                 leading fintech, digital health, and media companies. From
                 making fancy buttons with Sass to deploying scalable clusters
                 with Kubernetes, I think each part of the stack has its own
-                intresting problems to solve.
+                exciting problems to solve.
                 <br />
-                <br />
-                Currently, I am taking classes remotely and working with a team
-                of five engineers from Johns Hopkins to build MemeHub.io. I am
-                also seeking a new graduate position starting in Summer 2021.
+                <br />I am currently taking classes remotely and working with a
+                team of five engineers from Johns Hopkins to build MemeHub.io. I
+                am also seeking a new graduate position starting in Summer 2021.
               </p>
               <br />
             </div>

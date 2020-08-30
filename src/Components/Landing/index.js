@@ -94,7 +94,6 @@ class Landing extends React.Component {
             alt="hero-large"
             className="fixed"
             onLoad={() => {
-              console.log("big image finished loading");
               this.setState((prevState) => {
                 return {
                   ...prevState,

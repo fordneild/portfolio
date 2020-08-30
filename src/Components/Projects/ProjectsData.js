@@ -56,9 +56,6 @@ const projectsData = [
     technologies: ["Docker", "Spring", "Neo4j", "React", "Flask"],
     image: require("../../assets/projectPhotos/memehub-header.jpg"),
     backgroundSize: "100%",
-
-    // gradient:
-    //   "radial-gradient(circle, rgba(228,4,117,1) 0%, rgba(22,22,22,1) 48%, rgba(0,178,231,1) 75%, rgba(22,22,22,1) 87%)",
     gradient:
       "linear-gradient(25deg, rgba(22,22,22,1) -10%, rgba(0,178,231,1) 20%, rgba(228,4,117,1) 60%, rgba(22,22,22,1) 90%)",
     category: webDevelopment,
@@ -69,67 +66,17 @@ const projectsData = [
         "MemeHub is a social media platform I built alongside a team of 5 engineers from JHU. Our aggregaion enginer pulls memes from Instagram, Facebook, and Reddit and serves them to our users in a personalized feed. I love working on this project because it allows me to solve a wide range of problems spanning data science, web development, and distributed systems.",
       What_I_Did: {
         bullet1:
-          "Designed and implemented a real-time recommendation engine with Neo4j by combining collaborative filtering and content based features in an online machine learning model.",
+          "Designed and implemented a real-time recommendation engine with Neo4j by combining collaborative filtering scores with content-based features extracted via the Google Vision API.",
         bullet2:
-          "Architected a distributed system of 6 scalable services and a graph database using Docker Swarm.",
+          "Orchestrated a distributed system of six horizontally-scalable services and a graph database using Docker Swarm.",
         bullet3:
-          "Automated scraping for Reddit, Facebook and Instagram using Redis, Flask and Celery to queue for asynchronous tasks.",
+          "Automated scraping for Reddit, Facebook and Instagram using Redis, Flask and Celery to queue asynchronous tasks.",
         bullet4:
-          "Secured our Spring REST API with stateless JWT token authorization and role based permissions",
+          "Leveraged unsupervised clustering algorithms to accelerate recommendations by grouping users and memes.",
+        bullet5:
+          "Secured our Spring REST API with a https Nginx revierse proxy, stateless JWT token authorization and role-based permissions.",
       },
     },
-    // slides: [
-    //   {
-    //     images: [require("../../assets/projectPhotos/memeHub.png")],
-    //     title: "The Mission",
-    //     points: [
-    //       "Supplying the massive market for memes",
-    //       "Aggregating memes from Facebook, Reddit, Instagram and TikTok",
-    //       "Delivering  memes with a kick-ass reccomendation system",
-    //       "Making you smile",
-    //     ],
-    //   },
-    //   {
-    //     images: [
-    //       require("../../assets/projectPhotos/recentsListView.png"),
-    //       require("../../assets/projectPhotos/recentsGridView.png"),
-    //     ],
-    //     imageStyles: {
-    //       width: "50%",
-    //     },
-    //     title: "Feature: Recently Viewed",
-    //     points: [
-    //       "I built a recently viewed section for the home page. It helps our users get back to their most pressing work, and it is now one of the most used features on the hompage",
-    //       "I tracked visited pages and documents and updated the 15 most recent items viewed in Local Storage.",
-    //       "I designed a stack-like structure to hold the recent items, but becuase duplicates were not allowed, I needed to support O(1) find operation.",
-    //       "Thus I implemented the stack as a doubly linked list (for quick push and delete operations) but stored the nodes in a hash map for contanst time find operations,",
-    //     ],
-    //   },
-    //   {
-    //     images: [
-    //       require("../../assets/projectPhotos/typingIndicator.jpg"),
-    //       require("../../assets/projectPhotos/typingIndicator2.png"),
-    //     ],
-    //     title: "Feature: Typing Indicator",
-    //     points: [
-    //       'The mission statement of Way2B1 is to "kill email in the work place" and so I implemented a typing indicator to reduce friction between our users.',
-    //       "The typing indicator even functioned in group chat coversations (unlike iOS) and showed all typing users",
-    //       "I implemented the feature with websockets to allow for reliable low-latency multi-client communication",
-    //       "In addition, I abstracted and modularized the websocket functionality so that typing indicators could be easily implemented throughout Way2B1's three products",
-    //     ],
-    //   },
-    //   // {
-    //   //     image: require("../../assets/projectPhotos/typingIndicator.jpg"),
-    //   //     title: "Feature: Typing Indicator (Ford Neild is typing ...)",
-    //   //     points: [
-    //   //         "The mission statement of Way2B1 is to \"kill email in the work place\" and so I implemented a typing indicator to reduce friction between our users.",
-    //   //         "The typing indicator even functioned in group chat coversations (unlike iOS) and showed all typing users",
-    //   //         "I implemented the feature with websockets to allow for reliable low-latency multi-client communication",
-    //   //         "In addition, I abstracted and modularized the websocket functionality so that typing indcators could be implemented easily throguhout Way2B1's three products."
-
-    //   //     ]
-    //   // }
-    // ],
   },
   // komodo
   {
@@ -160,9 +107,9 @@ const projectsData = [
         bullet3:
           "Integrated SwaggerUI into our RESTful Flask API to document valid request formats and expected responses.",
         bullet4:
-          "Allevaited technical debt by migrating codebase from Python 2.7 to Python 3.6.",
+          "Allevaited technical debt by migrating 40K+ lines of code from Python 2.7 to Python 3.6.",
         bullet5:
-          "Implemented new password encryption and developed script to migrate productions passwords.",
+          "Implemented new password encryption scheme and developed script to migrate production passwords.",
       },
     },
   },
@@ -236,14 +183,14 @@ const projectsData = [
     addMask: true,
     description: {
       Background:
-        "Way2B1 is a B-series funded company creating collaborative software for wealth management. Over my month long winter break, I returned to the Way2B1 to workon their flagship product, Source.",
+        "Way2B1 is a B-series funded company creating collaborative software for wealth management. Over my month long winter break, I returned to the Way2B1 to work on their flagship product, Source.",
       What_I_Did: {
         bullet1:
           "I pushed 5 full-stack features to production for high priority banks and family offices. I gained experience working as part of an Agile team with 5 other developers using Jira.",
         bullet2:
           "I built a recently viewed section for the home page. It helps our users get back to their most pressing work, and it is now one of the most used features on the hompage",
         bullet3:
-          "Stored recent items visited as a JSON representation of a stack in a new user data table. On load, I cached it in local storage and patched the backend during low-stress periods to maintain performance.",
+          'Created a "recently viewed" feature by storing user interations as a JSON representation of a stack in a new user data table. It quickly became the second most used feature on the homepage.',
         bullet4:
           "Built real-time messaging and notifications using web sockets for low latency multi-client communication",
       },
