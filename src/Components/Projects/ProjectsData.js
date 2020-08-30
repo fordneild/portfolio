@@ -561,7 +561,7 @@ const projectsData = [
     role: "Student",
     company: "Johns Hopkins University",
     technologies: ["Java"],
-    image: require("../../assets/projectPhotos/hashTable2.jpg"),
+    // image: require("../../assets/projectPhotos/hashTable2.jpg"),
 
     dark: true,
     gradient:
@@ -591,7 +591,7 @@ const projectsData = [
     role: "Student",
     company: "Johns Hopkins University",
     technologies: ["C++"],
-    image: require("../../assets/projectPhotos/hashTree4.jpg"),
+    // image: require("../../assets/projectPhotos/hashTree4.jpg"),
     dark: false,
     gradient:
       "linear-gradient(0deg, rgba(239,226,184,1) 12%, rgba(29,206,255,1) 27%, rgba(151,198,76,1) 53%, rgba(97,174,255,1) 99%)",

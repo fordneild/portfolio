@@ -103,7 +103,8 @@ class Landing extends React.Component {
               });
             }}
             src={
-              "https://firebasestorage.googleapis.com/v0/b/portfolio-9117a.appspot.com/o/landingImage.png?alt=media&token=12519bd8-c3e4-4d92-ab4b-8371161be400"
+              // "https://firebasestorage.googleapis.com/v0/b/portfolio-9117a.appspot.com/o/landingImage.png?alt=media&token=12519bd8-c3e4-4d92-ab4b-8371161be400"
+              "https://firebasestorage.googleapis.com/v0/b/portfolio-9117a.appspot.com/o/landingImageLargeCompessed.jpg?alt=media&token=870d7ac5-0a0c-4e5e-ba71-ac1ef9c0b4d6"
             }
           />
           <img
