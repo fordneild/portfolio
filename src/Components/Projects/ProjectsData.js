@@ -49,7 +49,7 @@ const projectsData = [
   {
     show: 1,
     showcase: memeHubShowcaseData,
-    title: "Social Media App",
+    title: "MemeHub Web App",
     year: "2020",
     role: "Founder",
     company: "MemeHub Inc.",

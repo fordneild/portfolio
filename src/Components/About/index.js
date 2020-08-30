@@ -27,12 +27,12 @@ export default function About() {
               <p>
                 I have experience launching production web applications at
                 leading fintech, digital health, and media companies. From
-                making fancy buttons with Sass to deploying clusters of hundreds
-                of containers, I think each part of the stack has its own
+                making fancy buttons with Sass to deploying scalable clusters
+                with Kubernetes, I think each part of the stack has its own
                 intresting problems to solve.
                 <br />
                 <br />
-                Currently, I am taking classes on campus and working with a team
+                Currently, I am taking classes remotely and working with a team
                 of five engineers from Johns Hopkins to build MemeHub.io. I am
                 also seeking a new graduate position starting in Summer 2021.
               </p>
