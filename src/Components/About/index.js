@@ -39,8 +39,8 @@ export default function About() {
 							</p>
 							<br />
 							<p>
-								After graduting from JHU in May of 2021, I am
-								joining the investor services team at Carta (NYC
+								After graduting from JHU in May of 2021, I
+								joined the investor services team at Carta (NYC
 								office) as a Full-Stack Engineer.
 							</p>
 						</div>
