@@ -61,7 +61,7 @@ const projectsData = [
 			"linear-gradient(25deg, rgba(22,22,22,1) -10%, rgba(0,178,231,1) 20%, rgba(228,4,117,1) 60%, rgba(22,22,22,1) 90%)",
 		category: webDevelopment,
 		addMask: false,
-		liveLink: "https://memehub.io",
+		// liveLink: "https://memehub.io",
 		description: {
 			Background:
 				"I built the MemeHub.io alongside a team of 5 engineers from JHU to aggregate memes from Instagram, Facebook, and Reddit and serve them in a personalized TikTok style feed. MemeHub.io is my proudest accomplishment because I solved a wide range of technical problems spanning data science, web development, and distributed systems.",
@@ -460,7 +460,7 @@ const projectsData = [
 		gradient:
 			"linear-gradient(124deg, rgba(255,255,255,1) 27%, rgba(206,187,84,1) 71%, rgba(153,182,187,1) 87%, rgba(246,136,65,1) 97%)",
 		category: webDevelopment,
-		liveLink: "https://fordneild.github.io/pbs.html",
+		// liveLink: "https://fordneild.github.io/pbs.html",
 		githubLink: "https://github.com/fordneild/to-pledge-allegience",
 		description: {
 			Background:
@@ -492,7 +492,7 @@ const projectsData = [
 		gradient:
 			"linear-gradient(52deg, rgba(216,175,183,1) 11%, rgba(216,175,183,1) 61%, rgba(243,232,232,1) 76%)",
 		category: webDevelopment,
-		liveLink: "https://fordneild.github.io/forevermark.html",
+		// liveLink: "https://fordneild.github.io/forevermark.html",
 		githubLink: "https://github.com/fordneild/forevermark",
 		description: {
 			Background:

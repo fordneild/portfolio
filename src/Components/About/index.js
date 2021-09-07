@@ -14,11 +14,12 @@ export default function About() {
 					<div className="about__content">
 						<div className="about__content__column">
 							<p>
-								I'm Ford, a senior at Johns Hopkins University,
-								studying computer science. I have a passion for
-								building things, and coding enables me to
-								develop software that can have an immediate
-								impact on people worldwide.
+								I'm Ford, a software engineer at Carta, a
+								leading fintech firm bringing liquidity to
+								private markets. I have a passion for solving
+								problems, and coding enables me to develop
+								solutions to provide value with
+								speed and scale.
 							</p>
 							<div className="profile-picture--container">
 								<img
@@ -30,18 +31,28 @@ export default function About() {
 						</div>
 						<div className="about__content__column">
 							<p>
-								I have experience launching production web
-								applications at leading fintech, digital health,
-								and media companies. From making fancy buttons
-								with Sass to deploying scalable clusters with
-								Kubernetes, I think each part of the stack has
-								its own exciting problems to solve.
+								Before graduating from Johns Hopkins in 2021
+								with a B.S. in Computer Science, I built
+								beautiful single-page applications for the
+								Atlantic, a sleek marketing web app for Way2B1,
+								a production client onboarding tool at Komodo
+								Health, and founded Memehub with my peers.
 							</p>
-							<br />
 							<p>
-								After graduting from JHU in May of 2021, I
-								joined the investor services team at Carta (NYC
-								office) as a Full-Stack Engineer.
+								From brainstorming aggressive product road maps,
+								to creating a delightful UX and deploying
+								scalable backend services, I think each problem
+								presents its own unique and exciting challenges
+								to solve.
+							</p>
+							<p>
+								Now, I'm interested in growing my technical
+								skills at Carta while finding new tedious tasks
+								to automate in the investor service domain.
+								Outside work, I am also interested in
+								entrepreneurship, weight lifting, reading,
+								vipassana, exploring new restaurants in NYC, and
+								painting with Bob Ross.
 							</p>
 						</div>
 					</div>
