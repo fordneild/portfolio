@@ -51,7 +51,7 @@ export default function About() {
 								to automate in the investor service domain.
 								Outside work, I am also interested in
 								entrepreneurship, weight lifting, reading,
-								vipassana, exploring new restaurants in NYC, and
+								Vipassanā, exploring new restaurants in NYC, and
 								painting with Bob Ross.
 							</p>
 						</div>

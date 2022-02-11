@@ -64,7 +64,7 @@ const projectsData = [
 		// liveLink: "https://memehub.io",
 		description: {
 			Background:
-				"I built the MemeHub.io alongside a team of 5 engineers from JHU to aggregate memes from Instagram, Facebook, and Reddit and serve them in a personalized TikTok style feed. MemeHub.io is my proudest accomplishment because I solved a wide range of technical problems spanning data science, web development, and distributed systems.",
+				"I built MemeHub.io alongside a team of 5 engineers from JHU to aggregate memes from Instagram, Facebook, and Reddit and serve them in a personalized TikTok style feed. MemeHub.io is my proudest accomplishment because I solved a wide range of technical problems spanning data science, web development, and distributed systems.",
 			What_I_Did: {
 				bullet1:
 					"Designed and implemented a real-time recommendation engine with Neo4j by combining collaborative filtering scores with content-based features extracted via the Google Vision API.",
@@ -88,8 +88,7 @@ const projectsData = [
 		role: "Full-Stack Engineer Intern",
 		company: "Komodo Health",
 		technologies: ["React", "Flask", "Postgres", "Celery", "SQS"],
-		image:
-			"https://www.komodohealth.com/hubfs/6374024/_THEME_IMAGES/Komodo_Health_OG.jpg",
+		image: "https://www.komodohealth.com/hubfs/6374024/_THEME_IMAGES/Komodo_Health_OG.jpg",
 		backgroundSize: "100%",
 		dark: false,
 		gradient:
@@ -123,8 +122,7 @@ const projectsData = [
 		role: "Full-Stack Engineer",
 		company: "Way2B1",
 		technologies: ["React", "MobX", "Express", "Postgres", "Sass"],
-		image:
-			"https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80",
+		image: "https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80",
 		dark: false,
 		gradient:
 			"linear-gradient(150deg, rgba(255,136,119,1) 1%, rgba(124,124,149,1) 45%, rgba(125,99,91,1) 100%)",
@@ -204,8 +202,7 @@ const projectsData = [
 		year: "2019",
 		company: "Personal Project",
 		technologies: ["React", "Firebase"],
-		image:
-			"https://images.unsplash.com/photo-1511193311914-0346f16efe90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80",
+		image: "https://images.unsplash.com/photo-1511193311914-0346f16efe90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80",
 		dark: false,
 		gradient:
 			"linear-gradient(0deg, rgba(127,154,153,1) 0%, rgba(13,64,63,1) 100%)",
@@ -238,8 +235,7 @@ const projectsData = [
 		role: "Full-Stack Engineer Intern",
 		company: "Way2B1",
 		technologies: ["React", "Firebase", "Sass", "Figma"],
-		image:
-			"https://firebasestorage.googleapis.com/v0/b/portfolio-9117a.appspot.com/o/Chicago-Stage-Destop.jpg?alt=media&token=32172a05-2d93-4783-97b8-cde9d927ec26",
+		image: "https://firebasestorage.googleapis.com/v0/b/portfolio-9117a.appspot.com/o/Chicago-Stage-Destop.jpg?alt=media&token=32172a05-2d93-4783-97b8-cde9d927ec26",
 		// image: "https://acutrans.com/wp-content/uploads/2019/10/chicago_skyline-e1571623984482.jpg",
 		dark: false,
 		gradient:
@@ -302,8 +298,7 @@ const projectsData = [
 		role: "Backend Engineer Intern",
 		company: "WebDev Inc. Mumbai",
 		technologies: ["T-SQL", "ASP", ".Net", "C#"],
-		image:
-			"https://images.unsplash.com/photo-1552133457-ce1d2d33cdfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80",
+		image: "https://images.unsplash.com/photo-1552133457-ce1d2d33cdfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80",
 		imageTop: "-268px",
 		dark: false,
 		gradient:
@@ -318,8 +313,7 @@ const projectsData = [
 		role: "Student",
 		company: "Johns Hopkins University",
 		technologies: ["C++"],
-		image:
-			"https://www.cbronline.com/wp-content/uploads/2016/06/what-is-cache-memory.jpg",
+		image: "https://www.cbronline.com/wp-content/uploads/2016/06/what-is-cache-memory.jpg",
 		dark: false,
 		addMask: true,
 		gradient:
@@ -345,8 +339,7 @@ const projectsData = [
 		role: "Student",
 		company: "Johns Hopkins University",
 		technologies: ["C", "MIPS"],
-		image:
-			"https://www.discovercoding.ca/wp-content/uploads/2018/01/mips_assembly.jpg",
+		image: "https://www.discovercoding.ca/wp-content/uploads/2018/01/mips_assembly.jpg",
 		dark: false,
 		addMask: true,
 		gradient:
@@ -403,8 +396,7 @@ const projectsData = [
 		year: "2018",
 		company: "Personal Project",
 		technologies: ["TensorFLow", "NumPym", "Pandas", "Python"],
-		image:
-			"https://static.wixstatic.com/media/abed82_b0e5acddebbe48e4805c5c2603ffcf67~mv2.jpg",
+		image: "https://static.wixstatic.com/media/abed82_b0e5acddebbe48e4805c5c2603ffcf67~mv2.jpg",
 		imageTop: "-64px",
 		dark: true,
 		gradient:
