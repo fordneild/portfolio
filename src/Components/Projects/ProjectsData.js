@@ -64,7 +64,7 @@ const projectsData = [
 		// liveLink: "https://memehub.io",
 		description: {
 			Background:
-				"I built MemeHub.io alongside a team of 5 engineers from JHU to aggregate memes from Instagram, Facebook, and Reddit and serve them in a personalized TikTok style feed. MemeHub.io is my proudest accomplishment because I solved a wide range of technical problems spanning data science, web development, and distributed systems.",
+				"I built MemeHub.io alongside a team of 5 engineers from JHU to aggregate memes from Instagram, Facebook, and Reddit and serve them in a personalized TikTok style feed. I solved a wide range of technical problems spanning data science, web development, and distributed systems.",
 			What_I_Did: {
 				bullet1:
 					"Designed and implemented a real-time recommendation engine with Neo4j by combining collaborative filtering scores with content-based features extracted via the Google Vision API.",
